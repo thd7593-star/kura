@@ -1,0 +1,397 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guide Simulation</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <link rel="stylesheet" href="tanosimi.css" />
+    <link rel="stylesheet" href="./kura.css" />
+    <link rel="stylesheet" href="footer.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=M+PLUS+1+Code:wght@100..700&family=Noto+Serif+JP:wght@200..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=M+PLUS+1+Code:wght@100..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic&family=Google+Sans+Flex:opsz,wght@6..144,1..1000&family=Sawarabi+Gothic&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      footer {
+        font-family: "M PLUS 1 Code", monospace;
+      }
+      body,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      p,
+      a,
+      li,
+      span,
+      button {
+        font-family: "Noto Serif JP", serif;
+        font-optical-sizing: auto;
+        font-style: normal;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo-area">
+        <a href="kura.html" aria-label="くら寿司 ホームへ">
+          <img src="logo.png" alt="くら寿司 ロゴ" class="logo" />
+        </a>
+      </div>
+
+      <!-- 메인 메뉴 -->
+      <nav class="nav">
+        <ul class="menu">
+          <li><a href="kura.html">ホーム</a></li>
+          <li><a href="./osusume.html">おすすめ情報</a></li>
+          <li><a href="./店舗検索5.html">店舗検索</a></li>
+          <li><a href="./jy_kura_index_menu.html">メニュー</a></li>
+          <li><a href="./omochikaeri.html">お持ち帰り寿司</a></li>
+        </ul>
+      </nav>
+
+      <!-- 오른쪽 영역 -->
+
+      <div class="right-area">
+        <div class="language-selector">
+          <button class="language-btn" type="button" aria-expanded="false">
+            Language
+          </button>
+          <ul class="language-list">
+            <li><a href="https://www.kurasushi.co.jp/en/">English</a></li>
+            <li><a href="https://www.kurasushi.co.jp/zh/">中文（簡体）</a></li>
+            <li><a href="https://www.kurasushi.co.jp/zhb/">中文（繁体）</a></li>
+            <li><a href="https://www.kurasushi.co.jp/ko/">韓国</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="hero-bubble">
+        <img
+          src="https://www.kurasushi.co.jp/fan/images/howto/ttl.png"
+          alt=""
+        />
+      </div>
+    </section>
+    <section class="guide">
+      <div class="step-odd">
+        <!-- STEP 1 -->
+        <div class="step">
+          <div class="step-text">
+            <div class="step-number">Step 1</div>
+            <div>
+              <img
+                src="https://www.kurasushi.co.jp/fan/images/howto/heading_txt01.png"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="step-image">
+            <img
+              src="https://www.kurasushi.co.jp/fan/images/howto/thumb01.jpg"
+            />
+          </div>
+          <h3>スマホで近くのお店を検索＆ テーブル予約</h3>
+          <p>
+            `全国の店舗から、エリアや地図から近くのお店を
+            検索しよう！外出先からはスマートフォンアプリ でも検索頂けます。`
+          </p>
+          <div class="btn-group">
+            <div>
+              <a href="https://www.kurasushi.co.jp/epark/" class="link-button">
+                <button>スマホアプリ</button>
+              </a>
+            </div>
+            <div>
+              <a href="https://shop.kurasushi.co.jp/" class="link-button">
+                <button>店舗検索</button>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- STEP 3 -->
+        <div class="step">
+          <div class="step-text">
+            <div class="step-number">Step 3</div>
+            <div>
+              <img
+                src="https://www.kurasushi.co.jp/fan/images/howto/heading_txt03.png"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="step-image">
+            <img
+              src="https://www.kurasushi.co.jp/fan/images/howto/thumb03.jpg"
+            />
+          </div>
+          <h3>タッチパネル＆スマホで注文！ 超特急で、お届けします！</h3>
+          <p>
+            タッチパネルでラクラク注文！ご注文の商品はオーダーレーンですぐにお届け！
+          </p>
+          <div class="btn-group">
+            <div>
+              <a
+                href="https://www.kurasushi.co.jp/menu/?area=area0"
+                class="link-button"
+              >
+                <button>メニュー</button>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- STEP 5 -->
+        <div class="step">
+          <div class="step-text">
+            <div class="step-number">Step 5</div>
+            <div>
+              <img
+                src="https://www.kurasushi.co.jp/fan/images/howto/heading_txt05.png"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="step-image">
+            <img
+              src="https://www.kurasushi.co.jp/fan/images/howto/thumb05.jpg"
+            />
+          </div>
+          <h3>ビッくらポン！で景品ゲット！</h3>
+          <p>
+            食べ終わったお皿は、「皿カウンター水回収システム」へ投入。5皿に1回「ビッくらポン！」で素敵な景品が当たるチャンス！お食事をもっと楽しく！
+          </p>
+        </div>
+        <div class="black-box">
+          <div class="box-content">
+            <a href="https://www.kurasushi.co.jp/cover/">
+              <img
+                src="https://www.kurasushi.co.jp/fan/images/howto/feature06.png"
+                alt=""
+                class="box-img"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="step-even">
+        <!-- STEP 2 -->
+        <div class="step right">
+          <div class="step-text">
+            <div class="step-number">Step 2</div>
+            <div>
+              <img
+                src="https://www.kurasushi.co.jp/fan/images/howto/heading_txt02.png"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="step-image">
+            <img
+              src="https://www.kurasushi.co.jp/fan/images/howto/thumb02.jpg"
+            />
+          </div>
+          <h3>ご来店ありがとうございます！</h3>
+          <p>
+            携帯予約システムを使えばお店で待たずに食べられる！
+            会員限定クーポンも貰えておトク！
+          </p>
+          <div class="btn-group">
+            <div>
+              <a
+                href="https://www.kurasushi.co.jp/menu/?area=area0"
+                class="link-button"
+              >
+                <button>メニュー</button>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- STEP 4 -->
+        <div class="step right">
+          <div class="step-text">
+            <div class="step-number">Step 4</div>
+            <div>
+              <img
+                src="https://www.kurasushi.co.jp/fan/images/howto/heading_txt04.png"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="step-image">
+            <img
+              src="https://www.kurasushi.co.jp/fan/images/howto/thumb04.jpg"
+            />
+          </div>
+          <h3>お寿司から、うどんや デザートまで、すべて無添加！</h3>
+          <p>
+            こだわり寿司を味わいつくそう！四大添加物（化学調味料・人工保存料・人工甘味料・合成着色料）無添加で安心・安全。人気のサイドメニューも充実！
+          </p>
+          <div class="btn-group">
+            <div>
+              <a
+                href="https://www.kurasushi.co.jp/menu/?area=area0"
+                class="link-button"
+              >
+                <button>メニュー</button>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="banner-black">
+          <div class="banner-content">
+            <a href="https://www.kurasushi.co.jp/cover/">
+              <img
+                src="https://www.kurasushi.co.jp/fan/images/howto/feature04.png"
+                alt="항균 초밥 커버 안내"
+                class="banner-img"
+              />
+            </a>
+          </div>
+        </div>
+
+        <!-- STEP 6 -->
+        <div class="step right">
+          <div class="step-text">
+            <div class="step-number">Step 6</div>
+            <div>
+              <img
+                src="https://www.kurasushi.co.jp/fan/images/howto/heading_txt06.png"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="step-image">
+            <img
+              src="https://www.kurasushi.co.jp/fan/images/howto/thumb06.jpg"
+            />
+          </div>
+          <h3>ありがとうございましたっ！</h3>
+          <p>
+            お会計ボタンを押せば、店員を介さずお会計。お皿は自動でカウントされているので、正確！
+            ※クレジットカードは一部店舗では、ご利用いただけません。現金でのお支払いとなります。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 푸터 -->
+<footer class="kura-footer">
+    <div class="footer-inner">
+        <nav class="footer-nav">
+            <div class="nav-col">
+                <h3>公式サイト</h3>
+                <ul>
+                    <li><a href="#">おすすめ情報</a></li>
+                    <li><a href="#">店舗検索</a></li>
+                    <li><a href="#">メニュー</a></li>
+                    <li><a href="#">お持ち帰り寿司</a></li>
+                    <li class="mt-20"><a href="#">くら寿司プレスリリース</a></li>
+                </ul>
+            </div>
+
+              <body>
+  
+            <div class="nav-col">
+                <h3>企業サイト</h3>
+                <ul>
+                    <li><a href="https://www.kurasushi.co.jp/company/?_ga=2.47471271.1034545711.1771650560-1362875877.1771650560&_gl=1*1xc2jz8*_ga*MTM2Mjg3NTg3Ny4xNzcxNjUwNTYw*_ga_4ETWR1HF6K*czE3NzE5MTI3MTgkbzgkZzEkdDE3NzE5MTI3MjckajUxJGwwJGgw">会社案内</a></li>
+                    <li><a href="https://www.kurasushi.co.jp/company/ir/?_ga=2.47471271.1034545711.1771650560-1362875877.1771650560&_gl=1*bhqs92*_ga*MTM2Mjg3NTg3Ny4xNzcxNjUwNTYw*_ga_4ETWR1HF6K*czE3NzE5MTI3MTgkbzgkZzEkdDE3NzE5MTI4NDYkajYwJGwwJGgw">IR情報</a></li>
+                    <li><a href="https://www.kurasushi.co.jp/company/csr/?_ga=2.15051830.1034545711.1771650560-1362875877.1771650560&_gl=1*m11kzq*_ga*MTM2Mjg3NTg3Ny4xNzcxNjUwNTYw*_ga_4ETWR1HF6K*czE3NzE5MTI3MTgkbzgkZzEkdDE3NzE5MTI4NTgkajQ4JGwwJGgw">CSR活動</a></li>
+                    <li><a href="https://www.kurasushi.co.jp/company/recruit/?_ga=2.15051830.1034545711.1771650560-1362875877.1771650560&_gl=1*1672yz6*_ga*MTM2Mjg3NTg3Ny4xNzcxNjUwNTYw*_ga_4ETWR1HF6K*czE3NzE5MTI3MTgkbzgkZzEkdDE3NzE5MTI4ODMkajIzJGwwJGgw">採用情報</a></li>
+                    <li><a href="https://kura-job.net/jobfind-pc/">アルバイト・パート募集</a></li>
+                </ul>
+            </div>
+            <div class="nav-col">
+                <h3>Globalサイト</h3>
+                <ul>
+                    <li><a href="https://kurasushi.com/">KURA Sushi USA, Inc.</a></li>
+                    <li><a href="https://www.kurasushi.tw/">亞洲藏壽司股份有限公司</a></li>
+                </ul>
+            </div>
+            <div class="nav-col no-title">
+                <ul>
+                    <li><a href="https://www.kurasushi.co.jp/company/btob/storeland.php?_ga=2.35045025.1034545711.1771650560-1362875877.1771650560&_gl=1*vhpw6n*_ga*MTM2Mjg3NTg3Ny4xNzcxNjUwNTYw*_ga_4ETWR1HF6K*czE3NzE5MTI3MTgkbzgkZzEkdDE3NzE5MTI5NzIkajUkbDAkaDA.">店舗用地募集</a></li>
+                    <li><a href="https://www.kurasushi.co.jp/company/btob/local.php?_ga=2.35045025.1034545711.1771650560-1362875877.1771650560&_gl=1*9i015t*_ga*MTM2Mjg3NTg3Ny4xNzcxNjUwNTYw*_ga_4ETWR1HF6K*czE3NzE5MTI3MTgkbzgkZzEkdDE3NzE5MTI5OTIkajYwJGwwJGgw">ご当地食材募集</a></li>
+                    <li class="mt-20"><a href="https://www.kurasushi.co.jp/contact/?_ga=2.35045025.1034545711.1771650560-1362875877.1771650560&_gl=1*1g5t1a5*_ga*MTM2Mjg3NTg3Ny4xNzcxNjUwNTYw*_ga_4ETWR1HF6K*czE3NzE5MTI3MTgkbzgkZzEkdDE3NzE5MTMwMTQkajM4JGwwJGgw">お問い合わせ</a></li>
+                    <li><a href="https://www.kurasushi.co.jp/policy/?_ga=2.43488165.1034545711.1771650560-1362875877.1771650560&_gl=1*t43wyb*_ga*MTM2Mjg3NTg3Ny4xNzcxNjUwNTYw*_ga_4ETWR1HF6K*czE3NzE5MTI3MTgkbzgkZzEkdDE3NzE5MTMwNTYkajYwJGwwJGgw">プライバシーポリシー</a></li>
+                    <li><a href="https://www.kurasushi.co.jp/policy/socialmedia.html?_ga=2.206413587.1034545711.1771650560-1362875877.1771650560&_gl=1*1poi98o*_ga*MTM2Mjg3NTg3Ny4xNzcxNjUwNTYw*_ga_4ETWR1HF6K*czE3NzE5MTI3MTgkbzgkZzEkdDE3NzE5MTMwNTYkajYwJGwwJGgw">ソーシャルメディアポリシー</a></li>
+                   
+                </ul>
+            </div>
+        </nav>
+
+        <div class="allergy-btn-wrap">
+            <a href="https://www.kurasushi.co.jp/app/app_allergen.html" class="allergy-btn">アレルギー・原材料・原産地情報</a>
+        </div>
+
+        <div class="sns-box">
+            <div class="sns-top">
+                <span class="sns-label">くら寿司公式SNSで最新情報を配信中</span>
+                <div class="sns-icons">
+                    <a href="https://www.youtube.com/channel/UC9DcLCVMjjiuyuc4_deD0Pw"><img src="https://www.kurasushi.co.jp/common/images/icon_sns_yt.svg" alt="YouTube"></a>
+                    <a href="https://x.com/mutenkurasushi"><img src="https://www.kurasushi.co.jp/common/images/icon_sns_x.svg" alt="트위터"></a>
+                    <a href="https://www.facebook.com/Kurasushi"><img src="https://www.kurasushi.co.jp/common/images/icon_sns_fb.svg" alt="Facebook"></a>
+                         <a href="https://www.instagram.com/kurasushi.fan/"><img src="https://www.kurasushi.co.jp/common/images/icon_sns_in.png" alt="Facebook"></a>
+            
+                  </div>
+            </div>
+            <div class="sns-bottom">
+                <a href="https://www.kurasushi.co.jp/policy/socialmedia.html" class="sns-policy">ソーシャルメディアポリシー</a>
+            </div>
+        </div>
+<div class="footer-bottom">
+    <div class="bottom-logo">
+        <a href="kura.html">
+            <img src="logo.png" alt="くら寿司 ロゴ" class="bottom-logo" />
+        </a>
+    </div>
+    <p class="copyright">Copyright Kura Sushi, Inc. All Rights Reserved.</p>
+</div>
+                
+           
+    </div>
+
+    <div class="footer-pattern">
+        <a href="#" class="btn-top"></a>
+    </div>
+</footer>
+
+    <script src="kura.js"></script>
+    <script src="./footer.js"></script>
+  </body>
+</html>

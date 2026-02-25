@@ -1,0 +1,240 @@
+.sns-box1 {
+  text-align: center;
+  padding: 0px 20px;
+  background-color: #fff; /* 諛곌꼍??*/
+}
+
+.sns-title1 {
+  font-family: "Noto Serif JP", serif;
+  font-size: 35px;
+  font-weight: 500;
+  margin-bottom: 40px;
+  letter-spacing: 0.05em;
+}
+
+.sns-icons1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  margin-bottom: 40px;
+}
+
+.sns-icons1 a {
+  transition: opacity 0.3s ease;
+}
+
+.sns-icons1 a:hover {
+  opacity: 0.7; /* 留덉슦???占쎈졇?????占쎈젮占?*/
+}
+
+.sns-icons1 img {
+  width: 70px; /* ?占쎌씠占??占쎄린 議곗젙 */
+  height: auto;
+}
+
+.sns-label1 {
+  font-family: "BIZ UDPGothic", sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: #333;
+}
+
+/* ?占쎈━??留곹겕 (?占쎌궡???占쏀븿) */
+.sns-policy {
+  display: inline-block;
+  text-decoration: none;
+  color: #666;
+  font-size: 14px;
+  transition: color 0.3s;
+  margin-bottom: 90px;
+}
+
+.sns-policy span {
+  margin-right: 5px;
+  font-size: 12px;
+}
+
+.sns-policy:hover {
+  color: #000;
+  text-decoration: underline;
+}
+
+/* 3?占쎈씪?占쎈뱶 */
+body {
+  margin: 0;
+  font-family: "BIZ UDPGothic", sans-serif;
+}
+
+.container {
+  background-color: #eee;
+  padding: 10px 0; /* ?占쎌븘???占쎈갚 */
+  font-family: "M PLUS 1 Code", monospace;
+}
+/* ?占쎌껜 ?占쎈씪?占쎈뱶 ?占쎌뿭 */
+.slider-wrapper {
+  width: 1200px;
+  height: 80%;
+  margin: 40px auto;
+  /* overflow: hidden; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "M PLUS 1 Code", monospace;
+}
+
+.bx-wrapper {
+  border: none;
+  box-shadow: none;
+  background: transparent;
+}
+
+/* 占??占쎈씪?占쎈뱶 移대뱶 */
+.slide {
+  background: white;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
+}
+
+.text-box {
+  padding: 8px 10px;
+  text-align: left;
+  /* padding: ?占쏀븯  醫뚯슦 */
+  border: none;
+  font-family: "M PLUS 1 Code", monospace;
+}
+
+.text-box h3 {
+  margin: 0;
+  font-size: 16px;
+  font-family: "M PLUS 1 Code", monospace;
+}
+
+.slide a {
+  text-decoration: none; /* 諛묒쨪 ?占쎄굅 */
+  color: inherit; /* 遺占??占쎌긽 洹몌옙?占??占쎌슜 */
+  display: block;
+  font-family: "M PLUS 1 Code", monospace;
+  color: #666;
+}
+
+/* ?占쎌궡???占쎌튂 */
+.bx-wrapper .bx-prev {
+  left: -60px;
+}
+
+.bx-wrapper .bx-next {
+  right: -60px;
+}
+
+/* ?占쎌껜 而⑦뀒?占쎈꼫 */
+.sns-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px;
+}
+
+/* ?占쎈떒 4??洹몃━??*/
+.sns-grid-top {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+/* ?占쎈떒 2??洹몃━??*/
+.sns-grid-bottom {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+/* 怨듯넻 ?占쎌씠???占쏙옙???*/
+.sns-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  height: 80px; /* ?占쎈떒 諛뺤뒪 湲곕낯 ?占쎌씠 */
+  text-decoration: none;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+  overflow: hidden;
+  position: relative;
+}
+
+.sns-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* ?占쎈떒 ??諛뺤뒪 ?占쎌슜 ?占쎌씠 ?占쎌젙 */
+.sns-grid-bottom .sns-item {
+  height: 110px; /* ?占쎌껌?占쎌떊 ?占쏙옙??占쎌씠占??占쎌엫 */
+  padding-bottom: 15px; /* 吏洹몄옱占??占쏀꽩 怨듦컙 */
+}
+
+/* ?占쏙옙? ?占쎈젹??而⑦뀒?占쎈꼫 */
+.inner-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px; /* ?占쏙옙?吏?占?湲???占쎌씠 媛꾧꺽 */
+}
+
+/* ?占쏙옙?吏 ?占쏙옙???*/
+.sns-item img {
+  max-width: 70%;
+  max-height: 70%;
+  object-fit: contain;
+}
+
+/* ?占쎈떒 諛뺤뒪 ???占쏙옙?吏 ?占쎄린 蹂꾨룄 ?占쎌뼱 (?占쎌슂?? */
+.wide-box img {
+  height: 100px;
+}
+
+/* ?占쎌뒪???占쏙옙???*/
+.text-content {
+  text-align: center;
+  color: #3d3333;
+}
+
+.text-content strong {
+  display: block;
+  font-size: 19px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.text-content span {
+  display: block;
+  font-size: 14px;
+}
+
+/* ?占쎈떒 吏洹몄옱占??占쏀꽩 */
+.wide-box::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 12px;
+  background-image:
+    linear-gradient(45deg, #000 25%, transparent 25%),
+    linear-gradient(-45deg, #000 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, #000 75%),
+    linear-gradient(-45deg, transparent 75%, #000 75%);
+  background-size: 10px 10px;
+  background-color: #fff;
+}

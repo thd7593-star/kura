@@ -1,0 +1,55 @@
+/* 버튼 컨테이너 - 세로 줄무늬 배경 구현 */
+.action-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+
+  padding: 20px 0;
+
+  margin-top: -80px;
+
+  width: 100%;
+  flex-wrap: wrap;
+
+  /* 세로 줄무늬 배경 설정은 유지 */
+  background: linear-gradient(
+    90deg,
+    #f6f6ee 0%,
+    #f6f6ee 50%,
+    #ffffff 50%,
+    #ffffff 100%
+  );
+  background-size: 70px 100%;
+}
+
+.action-buttons .btn {
+  padding: 8px;
+}
+/* 버튼 개별 스타일 */
+.action-buttons .btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 12px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.action-buttons .btn:hover {
+  transform: translateY(-5px);
+  border-color: #999;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.action-buttons .btn img {
+  width: 320px;
+  height: auto;
+  display: block;
+  border-radius: 6px;
+}

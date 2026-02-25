@@ -1,0 +1,376 @@
+/* 기본 설정 */
+body {
+  margin: 0;
+  font-family: "Hiragino Sans", "Meiryo", sans-serif;
+  color: #333;
+}
+
+.main-container {
+  margin: 0 auto;
+  padding: 20px 10px;
+  width: 75%;
+}
+
+/* 브레드크럼 가로 정렬 */
+.breadcrumb {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin-bottom: 6px;
+  gap: 8px;
+  font-size: 16px;
+  color: #666;
+}
+
+.main-container nav ol.breadcrumb li,
+.main-container nav ol.breadcrumb li a {
+  font-size: 16px;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* 페이지 타이틀 */
+.page-title {
+  border-bottom: 2px solid #eee;
+  padding-bottom: 15px;
+  margin-bottom: 30px;
+}
+.store-name {
+  font-size: 24px;
+  margin: 0;
+}
+
+/* 주소 */
+.content-item {
+  display: flex; /* 가로 정렬의 핵심 */
+  padding: 30px 0;
+  border-bottom: 1px solid #b1aeae;
+  box-sizing: border-box;
+  justify-content: space-between;
+  /* space between: "첫 번째 놈은 왼쪽 끝에, 마지막 놈은 오른쪽 끝에 두고 나머지는 그 사이에 똑같은 간격으로 벌려놔!" */
+}
+
+.content-item__left {
+  width: 200px; /* 제목 너비 고정 */
+  flex-shrink: 0; /* 절대 줄어들지 말라고 명령하는 것*/
+}
+.content-item__left h2 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  margin: 0;
+  font-weight: bold;
+}
+
+.content-item__right {
+  flex-grow: 1; /* 나머지 공간 차지 */
+
+  margin: 0;
+  padding: 0;
+
+  font-size: 100%;
+  background: transparent;
+
+  box-sizing: border-box;
+
+  font-family: Hiragino Sans W3;
+  line-height: 24px;
+}
+
+.content-item__right p {
+  margin: 0; /* 위아래 여백을 완전히 없앰 */
+  line-height: 1.5; /* 줄 간격을 조절해서 가독성 유지 */
+}
+
+/* 버튼 스타일 */
+.address-btn-group {
+  display: flex;
+  font: normal 16px/24px Hiragino Sans W3;
+  gap: 10px;
+  margin-top: 16px;
+  width: 100%;
+  box-sizing: border-box;
+
+  margin-top: 16px;
+  padding: 0;
+
+  background-color: transparent;
+}
+
+.address-btn-group a {
+  background: #343434;
+  color: white;
+  font-weight: normal;
+}
+
+.btn {
+  padding: 1px 4px; /* 상하 패딩만 설정 */
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1.4;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.2s; /* 마우스 올렸을 때 효과 */
+  width: 150px;
+}
+
+.line-btn {
+  border: 1px solid #06c755;
+  color: #06c755;
+  border-radius: 8px;
+}
+
+/* 예약 */
+.reservation__footer {
+  display: flex;
+  align-items: flex-end; /* 버튼들의 아래쪽 라인을 맞춤 */
+  gap: 15px; /* 박스와 버튼 사이의 간격 */
+  margin-top: 15px;
+  width: 100%;
+}
+
+/* 예약 버튼 박스 (좌측) */
+.reservation__main {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background-color: #ece9e9;
+  padding: 17px;
+  border-radius: 5px;
+  flex-basis: 480px;
+  flex-shrink: 0;
+}
+
+.reservation__main__btn {
+  flex: 1; /* 두 버튼의 너비를 동일하게 맞춤 */
+  text-align: center;
+
+  background-color: pink;
+  border-radius: 5px;
+  color: rgb(94, 3, 3);
+  text-decoration: none;
+}
+
+/* アプリ, ＼会員登録不要／ 부분*/
+.reservation__main__btn.btn-seat {
+  background-color: red;
+}
+.font-12 {
+  font-size: 12pt;
+  color: white;
+}
+.font-16 {
+  color: white;
+}
+
+/* LINE 버튼 박스 (우측) */
+.reservation__extra {
+  flex-shrink: 0; /* LINE 버튼 영역이 줄어들지 않게 고정 */
+  margin-bottom: 2px; /* 버튼 높이 미세 조정 */
+}
+
+.line-btn {
+  border: 1px solid #06c755;
+  padding: 7px 16px;
+  color: #06c755;
+  text-decoration: none;
+  position: relative;
+  top: -10px;
+}
+
+.reservation-box {
+  display: flex;
+  justify-content: center;
+  gap: 15px; /* 내부 요소들 간격 */
+  font: normal 16px/24px Hiragino Sans W6;
+  font-weight: 700;
+
+  margin: 0;
+  padding: 0;
+
+  background: transparent;
+
+  box-sizing: border-box;
+}
+
+.reservation__phone {
+  text-decoration: none;
+  color: black;
+  font-size: 20pt;
+  font-weight: bold;
+}
+
+.time-info {
+  text-align: center;
+  font-size: 14px;
+  color: #333;
+  padding-bottom: 10px;
+  font-weight: bold;
+}
+.time-info span {
+  color: black; /* 시간 부분 강조 */
+  font-weight: bold;
+  font-size: 15px;
+  margin-left: 5px;
+}
+
+/* 버튼 그룹: 2개의 버튼이 가로로 꽉 차게 */
+.btn-group {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+}
+
+.business-hour__list {
+  list-style: none; /* 점 제거 */
+  padding: 0;
+  margin: 0;
+  line-height: 1.8; /* 줄 간격 확보 */
+}
+
+.business-hour__list li {
+  display: flex; /* 요일과 시간을 가로로 정렬 */
+  gap: 20px; /* 요일과 시간 사이 간격 */
+  font-size: 15px;
+}
+
+/* 요일 텍스트의 너비를 고정하여 시간 숫자의 시작 위치를 맞춤 */
+.business-hour__list .day {
+  width: 60px;
+  display: inline-block;
+  margin-left: 30px;
+}
+
+/* 오늘 날짜 강조 스타일 */
+.business-hour__list li.is-today {
+  font-weight: bold;
+  color: #000;
+}
+
+.today-label {
+  font-size: 13px;
+  color: #bc0d19; /* 오늘임을 알리는 빨간색 텍스트 */
+  margin-left: 5px;
+}
+
+.business-hour__remark {
+  margin-top: 10px;
+  font-size: 13px;
+  color: #666;
+}
+
+/* 이미지 버튼(감싸는 박스)의 크기를 조절 */
+.post__image {
+  width: 100%; /* 너비를 100%로 늘림 */
+  max-width: 400px; /* 너무 커지는 것을 방지 (선택 사항) */
+  height: auto; /* 높이는 비율에 맞게 자동 조절 */
+  flex-shrink: 0; /* 공간이 좁아져도 이미지가 더 작아지지 않게 고정 */
+  padding: 0; /* 버튼 기본 패딩 제거 */
+  border: none; /* 버튼 테두리 제거 */
+  background: none; /* 버튼 배경 제거 */
+  cursor: pointer;
+}
+
+/* 박스 안의 실제 이미지가 박스에 꽉 차게 설정 */
+.post__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 이미지가 찌그러지지 않게 꽉 채움 */
+  display: block; /* 하단 미세 공백 제거 */
+  border-radius: 5px;
+}
+
+.post__date {
+  color: #767676;
+  font: normal 14px / 25px Hiragino Sans W3;
+  font-size: 11pt;
+  font-weight: 500;
+}
+
+/* 이미지 버튼 스타일 */
+
+.post__content {
+  display: flex;
+  flex-direction: column; /* 세로 정렬로 변경 */
+  gap: 5px; /* 이미지와 텍스트 사이의 위아래 간격 */
+  align-items: flex-start; /* 왼쪽 정렬 (중앙 정렬을 원하면 center) */
+}
+
+/* 詳細ページをみる 링크 */
+.post__external-link {
+  margin-top: 20px;
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+}
+
+/* 続きを読む 링크 */
+.post__reamore-btn {
+  text-decoration: none;
+  color: #bc0d19; /* 붉은색 유지 */
+  font-weight: 580;
+}
+
+/*イベント一覧をみる 링크 */
+.post__list-page-btn {
+  text-decoration: none;
+  color: black;
+  font-weight: 550;
+  border: 1px solid black;
+  border-radius: 3px;
+  padding: 5px 10px;
+}
+
+.post__title__text {
+  font-weight: bold;
+}
+
+.post__detail {
+  font-weight: 600;
+}
+
+.post__footer {
+  margin-top: 20px; /* 기존 간격보다 더 넓게 조정 (원하는 수치로 변경 가능) */
+}
+
+.post__item {
+  width: 40%;
+}
+
+/* 모달(Dialog) 기본 스타일 */
+.post__dialog {
+  border: none;
+  border-radius: 12px;
+  padding: 0;
+}
+
+.post__dialog::backdrop {
+  background: rgba(0, 0, 0, 0.7); /* 배경을 어둡게 */
+}
+
+.post__dialog {
+  padding: 0;
+  border: none;
+  border-radius: 8px;
+  max-width: 500px;
+}
+
+/* 모달이 열렸을 때 배경 설정 */
+.post__dialog::backdrop {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.dialog-content {
+  padding: 20px;
+  text-align: center;
+}
+
+#previewImage {
+  width: 100%;
+  height: auto;
+  display: block;
+}

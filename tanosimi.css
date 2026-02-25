@@ -1,0 +1,245 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: #eee;
+}
+
+/* ===== HERO ===== */
+.hero {
+  position: relative;
+  width: 90%;
+  height: 410px;
+  background: url("https://www.kurasushi.co.jp/fan/images/howto/bg_sky.jpg")
+    no-repeat center/cover;
+  background-size: cover;
+  margin: 0 auto;
+}
+
+/* 말풍선 */
+.hero-bubble {
+  position: absolute;
+  top: 40px;
+  left: 80px;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.hero-bubble img {
+  width: 50%;
+}
+
+/* 말풍선 꼬리표 (삼각형) */
+.hero-text::after {
+  content: "";
+  position: absolute;
+  bottom: -15px; /* 말풍선 아래쪽으로 튀어나오게 */
+  left: 50px; /* 삼각형의 가로 위치 */
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-top: 15px solid white; /* 말풍선 배경색과 동일하게 */
+}
+
+/* ===== GUIDE SECTION ===== */
+.guide {
+  width: 1000px;
+  margin: 80px auto;
+  position: relative;
+  display: flex;
+}
+
+.step-odd {
+  position: relative;
+  top: -200px;
+}
+.step-even {
+  position: relative;
+  top: -120px;
+}
+
+/* STEP CARD */
+.step {
+  background: white;
+  width: 450px;
+  margin-bottom: 50px;
+  position: relative;
+  box-sizing: border-box;
+  padding-bottom: 30px;
+}
+
+.step-text {
+  display: flex; /* 가로 정렬 */
+  align-items: center; /* 세로 중앙 정렬 */
+  gap: 10px; /* 간격 */
+  height: 90px;
+}
+
+/* STEP 번호 */
+.step-number {
+  background: red;
+  color: white;
+  padding: 0 15px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  flex-shrink: 0; /* 글자가 아래줄로 넘어가지 않도록 */
+}
+
+/* 제목 이미지 */
+.step-text img {
+  height: 30px; /* step-number와 동일 */
+  width: auto; /* 비율 유지 */
+  display: block;
+  max-width: 100%; /* 혹시 모를 넘침 방지 */
+}
+
+.step-image {
+  width: 100%;
+}
+
+.step-image img {
+  width: 100%; /* 부모(.step-image) 너비에 맞춤 */
+  height: auto; /* 비율 유지 */
+  display: block; /* inline 여백 제거 */
+}
+
+.step h3 {
+  margin-top: 15px;
+  margin-left: 15px;
+  font-family: "Noto Serif JP", serif;
+}
+
+.step p {
+  font-family: "Noto Serif JP", serif;
+  margin-left: 15px;
+}
+
+.btn-group {
+  display: flex;
+  justify-content: center;
+  gap: 10px; /* 버튼 사이 간격 */
+  margin-top: 25px; /* 설명(p)과의 간격 */
+  padding-bottom: 20px; /* 카드 하단 여백 */
+  width: 100%;
+}
+
+.link-button {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 12px 20px;
+  text-align: center;
+}
+
+.link-button button {
+  font-size: 16px;
+  border-radius: 10px; /* 약간의 곡선 */
+  padding: 18px 0; /* 위아래 두께를 두껍게 */
+  width: 160px; /* 가로 너비를 넓게 (원하는 만큼 숫자를 키우세요) */
+  height: 70px;
+}
+
+.step button {
+  margin-top: 15px;
+  padding: 8px 15px;
+  border: 1px solid #ccc;
+  background: white;
+  cursor: pointer;
+}
+
+/* 오른쪽 배치 */
+.step.right {
+  margin-left: 40px;
+  margin-bottom: 50px;
+}
+
+/* ===== BLACK BANNER (검정색 안내 박스) ===== */
+.banner-black {
+  width: 80%; /* .step 카드와 동일한 너비 */
+  margin-left: 50px; /* .step.right와 동일한 왼쪽 간격 */
+  margin-bottom: 50px;
+  box-sizing: border-box;
+  padding: 10px; /* 이미지 주변에 약간의 검은색 여백 생성 */
+}
+
+/* 배너 내부 이미지 설정 */
+.banner-img {
+  width: 100%; /* 박스 너비에 꽉 차게 */
+  height: auto;
+  display: block; /* 하단 공백 제거 */
+  transition: opacity 0.3s;
+}
+
+/* step-even 내부에 있으므로 위치 미세 조정 */
+.step-even .banner-black {
+  position: relative;
+  top: -110px; /* .step-even에 설정된 top값과 일치시켜 라인 맞춤 */
+}
+
+/* ===== BLACK BOX ===== */
+.step-odd {
+  position: relative;
+}
+
+.black-box {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 50px;
+  box-sizing: border-box;
+
+  position: absolute;
+
+  left: 90px;
+  top: 2000px;
+  z-index: 5;
+}
+
+.box-content {
+  width: 100%;
+}
+
+.box-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: opacity 0.3s;
+}
+
+/* ===== 점선 화살표 설정 ===== */
+/* 1. 왼쪽 카드(Step 1, 3, 5) 뒤에 화살표 추가 */
+.step:not(.right)::after {
+  content: "";
+  position: absolute;
+  /* 화살표 위치 조절 */
+  right: -80px;
+  bottom: 60px;
+
+  /* 화살표 이미지 (쿠라스시 공식 이미지 주소) */
+  width: 90px;
+  height: 50px;
+  background: url("https://www.kurasushi.co.jp/fan/images/howto/arrow05.png")
+    no-repeat center/contain;
+  z-index: 5;
+}
+
+/* 2. 오른쪽 카드(Step 2, 4) 아래: 반전된 이미지 주소 사용 */
+.step.right:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  left: -60px;
+  bottom: 10px;
+
+  width: 90px;
+  height: 50px;
+
+  background: url("https://www.kurasushi.co.jp/fan/images/howto/arrow02.png")
+    no-repeat center/contain;
+
+  /* 필요에 따라 각도만 rotate로 살짝 조절하세요. */
+  transform: rotate(-10deg);
+  z-index: 5;
+}
+
+/* 마지막 단계(Step 6)는 화살표가 나오지 않도록 처리 */
+.step.right:last-child::after {
+  display: none;
+}

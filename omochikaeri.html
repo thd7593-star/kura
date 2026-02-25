@@ -1,0 +1,535 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="omochikaeri.css" />
+    <link rel="stylesheet" href="kura.css" />
+    <link rel="stylesheet" href="footer.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=M+PLUS+1+Code:wght@100..700&family=Noto+Serif+JP:wght@200..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=M+PLUS+1+Code:wght@100..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic&family=Google+Sans+Flex:opsz,wght@6..144,1..1000&family=Sawarabi+Gothic&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      footer {
+        font-family: "M PLUS 1 Code", monospace;
+      }
+      body,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      p,
+      a,
+      li,
+      span,
+      button {
+        font-family: "Noto Serif JP", serif;
+        font-optical-sizing: auto;
+        font-style: normal;
+      }
+    </style>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      p,
+      a,
+      li,
+      span,
+      button,
+      .qr-explain {
+        font-family: "Noto Serif JP", serif;
+        font-optical-sizing: auto;
+        font-style: normal;
+        font-weight: 400;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo-area">
+        <a href="kura.html" aria-label="くら寿司 ホームへ">
+          <img src="logo.png" alt="くら寿司 ロゴ" class="logo" />
+        </a>
+      </div>
+
+      <!-- 메인 메뉴 -->
+      <nav class="nav">
+        <ul class="menu">
+          <li><a href="kura.html">ホーム</a></li>
+          <li><a href="./osusume.html">おすすめ情報</a></li>
+          <li><a href="./店舗検索5.html">店舗検索</a></li>
+          <li><a href="./jy_kura_index_menu.html">メニュー</a></li>
+          <li><a href="./omochikaeri.html">お持ち帰り寿司</a></li>
+        </ul>
+      </nav>
+
+      <!-- 오른쪽 영역 -->
+
+      <div class="right-area">
+        <div class="language-selector">
+          <button class="language-btn" type="button" aria-expanded="false">
+            Language
+          </button>
+          <ul class="language-list">
+            <li><a href="https://www.kurasushi.co.jp/en/">English</a></li>
+            <li><a href="https://www.kurasushi.co.jp/zh/">中文（簡体）</a></li>
+            <li><a href="https://www.kurasushi.co.jp/zhb/">中文（繁体）</a></li>
+            <li><a href="https://www.kurasushi.co.jp/ko/">韓国</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <div>
+      <img
+        id="top-img"
+        src="https://www.kurasushi.co.jp/takeout/images/h1_takeout_bg.jpg"
+        alt=""
+      />
+      <div>
+        <img
+          id="top-text2"
+          src="https://www.kurasushi.co.jp/takeout/images/h1_takeout.png"
+          alt=""
+        />
+      </div>
+    </div>
+    <main>
+      <div class="main1-bg">
+        <div class="main1">
+          <img
+            id="takeout"
+            src="https://www.kurasushi.co.jp/takeout/images/takeout_logo_ouchidekura.png"
+            alt=""
+          />
+          <div class="text1">おいしい寿司は、人肌のシャリに限る。</div>
+          <div class="text2">
+            シャリは冷蔵すると、本来の旨みがなくなってしまいます。<br />
+            徹底した衛生管理と直前調理で実現した味をご家庭でもぜひ。
+          </div>
+          <br />
+          <hr />
+          <br />
+          <div class="box-a">
+            <div class="box1">
+              <img
+                id="img-1"
+                src="https://www.kurasushi.co.jp/takeout/images/summary_text.png"
+                alt=""
+              />
+              <div class="text3">※一部店舗では価格が異なります。</div>
+            </div>
+            <div class="big-qrbox">
+              <button>
+                <b>持ち帰り店舗検索</b> <span class="btn-arrow">〉</span>
+              </button>
+              <div class="qr-explain">
+                くら寿司公式アプリのダウンロードはこちらから
+              </div>
+              <div class="qr-bigbox">
+                <div class="qr-box">
+                  <div class="qr">
+                    <img
+                      src="https://www.kurasushi.co.jp/takeout/images/appqr_ios.png"
+                      alt=""
+                    />
+                    <button class="btn">
+                      <b>IOS</b>の方
+                      <div class="arrow2">></div>
+                    </button>
+                  </div>
+                  <div class="qr">
+                    <img
+                      src="https://www.kurasushi.co.jp/takeout/images/appqr_ios.png"
+                      alt=""
+                    />
+                    <button class="btn">
+                      <b>Android</b>の方
+                      <div class="arrow2">></div>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="box-b">
+            <div>
+              <div class="b1">
+                <div>
+                  <img
+                    src="https://www.kurasushi.co.jp/takeout/images/takeout_menu-bt01.png"
+                    alt=""
+                  />
+                  <div class="b-text1">スマホdeお持ち帰り</div>
+                </div>
+                <div>
+                  <img
+                    src="https://www.kurasushi.co.jp/takeout/images/takeout_menu-bt02.png"
+                    alt=""
+                  />
+                  <div class="b-text2">くるまdeお持ち帰り</div>
+                </div>
+              </div>
+              <div class="b2">
+                <div>
+                  <img
+                    src="https://www.kurasushi.co.jp/takeout/images/takeout_menu-bt03.png"
+                    alt=""
+                  />
+                  <div class="b-text3">出前deくら</div>
+                </div>
+                <div>
+                  <img
+                    src="https://www.kurasushi.co.jp/takeout/images/takeout_menu-bt04.png"
+                    alt=""
+                  />
+                  <div class="b-text4">通販</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="main2">
+        <div>
+          <div class="c-text">お持ち帰りセット 価格別メニューのご案内</div>
+          <div class="line"><hr /></div>
+          <div class="button-group">
+            <button class="price-btn" data-target="section-115">
+              <span>一皿115円～店舗</span> <i class="arrow">〉</i>
+            </button>
+            <button class="price-btn" data-target="section-side">
+              <span>サイドメニュー</span> <i class="arrow">〉</i>
+            </button>
+            <button class="price-btn">
+              <span>一皿130円～店舗</span> <i class="arrow">〉</i>
+            </button>
+            <button class="price-btn" id="section-115">
+              <span>一皿150円～店舗</span> <i class="arrow">〉</i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="main3">
+        <div class="c-text2">お持ち帰り寿司セット［一皿115円〜店舗］</div>
+        <div class="menu-line">
+          <div class="menu-box">
+            <img
+              src="https://www.kurasushi.co.jp/takeout/uploads/260123_omochikaeri_goukakukigansetto.jpg"
+              alt=""
+            />
+            <div class="name">
+              <b>合格祈願セット</b>
+              <div class="price">1,000円</div>
+            </div>
+            <div class="line2"><hr /></div>
+            <div class="expain">
+              ※特上まぐろ・とろサーモン・熟成真鯛・真たこ・ゆず塩かつおたたき・いくら軍艦・かずのこ軍艦・納豆軍艦
+            </div>
+          </div>
+          <div class="menu-box">
+            <img
+              src="https://www.kurasushi.co.jp/takeout/uploads/078ecde9b1f94dcfe91ec60f3306f10c725e6f9b.jpg"
+              alt=""
+            />
+            <div class="name">
+              <b>まんぷくお得セット（60貫）</b>
+              <div class="price">通常価格 3,500円 → <span>3,030円</span></div>
+            </div>
+            <div class="line2"><hr /></div>
+            <div class="expain">
+              熟成まぐろ・サーモン・ビントロ・いか・尾なしえび・たまご焼き・いなり・ねぎまぐろ・サラダ・コーン
+              ※容器を2つに分けてご提供させて頂きます。
+            </div>
+          </div>
+        </div>
+        <div class="menu-line">
+          <div class="menu-box">
+            <img
+              src="https://www.kurasushi.co.jp/takeout/uploads/65fa07adc15ef5306fb1eb633f408455b80008cf.jpg"
+              alt=""
+            />
+            <div class="name">
+              <b>くら寿司大人気セット</b>
+              <div class="price"></div>
+            </div>
+            <div class="line2"><hr /></div>
+            <div class="expain">
+              熟成まぐろ・ビントロ・サーモン・いか・えび・あなご・たまご焼き
+            </div>
+            <div class="explain-bold">
+              <b>上記のセットは 1人前 〜6人前 までお選びいただけます</b>
+            </div>
+            <div class="line2"><hr /></div>
+            <div class="price-grid">
+              <div class="price-item">
+                <div class="person-box">1人前<br /><span>(9貫)</span></div>
+                <div class="price-text">700<span>円</span></div>
+              </div>
+              <div class="price-item">
+                <div class="person-box">2人前<br /><span>(18貫)</span></div>
+                <div class="price-text">1,400<span>円</span></div>
+              </div>
+              <div class="price-item">
+                <div class="person-box">3人前<br /><span>(27貫)</span></div>
+                <div class="price-text">2,100<span>円</span></div>
+              </div>
+
+              <div class="price-item">
+                <div class="person-box">4人前<br /><span>(36貫)</span></div>
+                <div class="price-text">2,800<span>円</span></div>
+              </div>
+              <div class="price-item">
+                <div class="person-box">5人前<br /><span>(45貫)</span></div>
+                <div class="price-text">3,500<span>円</span></div>
+              </div>
+              <div class="price-item">
+                <div class="person-box">6人前<br /><span>(54貫)</span></div>
+                <div class="price-text">4,200<span>円</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="menu-box">
+            <img
+              src="https://www.kurasushi.co.jp/takeout/uploads/790046e41bebe72fde883a249250f7a6153a420e.jpg"
+              alt=""
+            />
+            <div class="name">
+              <b>くら寿司お得セット（30貫）</b>
+              <span class="price">通常価格 1,750円 → <span>1,640円</span></span>
+            </div>
+            <div class="line2"><hr /></div>
+            <div class="expain">
+              熟成まぐろ・サーモン・ビントロ・いか・尾なしえび・たまご焼き・いなり・ねぎまぐろ・サラダ・コーン
+            </div>
+          </div>
+        </div>
+        <div class="menu-line">
+          <div class="menu-box">
+            <img
+              src="https://www.kurasushi.co.jp/takeout/uploads/251031_teiban_tokujyougokuumasetto.jpg"
+              alt=""
+            />
+            <div class="name">
+              <b>特上極旨セット</b>
+              <div class="price"></div>
+            </div>
+            <div class="line2"><hr /></div>
+            <div class="expain">
+              熟成中とろ・厳選サーモン・熟成真鯛・赤えび・はまち・うなぎ・あわび・うに入り海鮮・いくら・かに身軍艦
+            </div>
+            <div class="explain-bold">
+              <b>上記のセットは 1人前 〜5人前 までお選びいただけます</b>
+            </div>
+            <div class="line2"><hr /></div>
+            <div class="price-grid">
+              <div class="price-item">
+                <div class="person-box">1人前<br /><span>(10貫)</span></div>
+                <div class="price-text">1,900<span>円</span></div>
+              </div>
+              <div class="price-item">
+                <div class="person-box">2人前<br /><span>(20貫)</span></div>
+                <div class="price-text">3,800<span>円</span></div>
+              </div>
+              <div class="price-item">
+                <div class="person-box">3人前<br /><span>(30貫)</span></div>
+                <div class="price-text">5,700<span>円</span></div>
+              </div>
+
+              <div class="price-item">
+                <div class="person-box">4人前<br /><span>(40貫)</span></div>
+                <div class="price-text">7,600<span>円</span></div>
+              </div>
+              <div class="price-item">
+                <div class="person-box">5人前<br /><span>(50貫)</span></div>
+                <div class="price-text">9,500<span>円</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="menu-box">
+            <img
+              src="https://www.kurasushi.co.jp/takeout/uploads/e2ae0872b4aa11df33cd632e525cf0441ddd57a9.jpg"
+              alt=""
+            />
+            <div class="name">
+              <b>極旨セット</b>
+              <div class="price"></div>
+            </div>
+            <div class="line2"><hr /></div>
+            <div class="expain">
+              熟成まぐろ・ビントロ・サーモン・いか・えび・あなご・たまご焼き
+            </div>
+            <div class="explain-bold">
+              <b>上記のセットは 1人前 〜6人前 までお選びいただけます</b>
+            </div>
+            <div class="line2"><hr /></div>
+            <div class="price-grid">
+              <div class="price-item">
+                <div class="person-box">1人前<br /><span>(9貫)</span></div>
+                <div class="price-text">700<span>円</span></div>
+              </div>
+              <div class="price-item">
+                <div class="person-box">2人前<br /><span>(18貫)</span></div>
+                <div class="price-text">1,400<span>円</span></div>
+              </div>
+              <div class="price-item">
+                <div class="person-box">3人前<br /><span>(27貫)</span></div>
+                <div class="price-text">2,100<span>円</span></div>
+              </div>
+
+              <div class="price-item">
+                <div class="person-box">4人前<br /><span>(36貫)</span></div>
+                <div class="price-text">2,800<span>円</span></div>
+              </div>
+              <div class="price-item">
+                <div class="person-box">5人前<br /><span>(45貫)</span></div>
+                <div class="price-text">3,500<span>円</span></div>
+              </div>
+              <div class="price-item">
+                <div class="person-box">6人前<br /><span>(54貫)</span></div>
+                <div class="price-text">4,200<span>円</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="main4" id="section-side">
+        <div class="d-title">サイドメニュー</div>
+        <div>
+          <img
+            class="side-menu"
+            src="https://www.kurasushi.co.jp/takeout/uploads/takeout_sidemenu.png?20210401"
+            alt=""
+          />
+        </div>
+      </div>
+      <!-- 푸터 -->
+<footer class="kura-footer">
+    <div class="footer-inner">
+        <nav class="footer-nav">
+            <div class="nav-col">
+                <h3>公式サイト</h3>
+                <ul>
+                    <li><a href="#">おすすめ情報</a></li>
+                    <li><a href="#">店舗検索</a></li>
+                    <li><a href="#">メニュー</a></li>
+                    <li><a href="#">お持ち帰り寿司</a></li>
+                    <li class="mt-20"><a href="#">くら寿司プレスリリース</a></li>
+                </ul>
+            </div>
+
+              <body>
+  
+            <div class="nav-col">
+                <h3>企業サイト</h3>
+                <ul>
+                    <li><a href="https://www.kurasushi.co.jp/company/?_ga=2.47471271.1034545711.1771650560-1362875877.1771650560&_gl=1*1xc2jz8*_ga*MTM2Mjg3NTg3Ny4xNzcxNjUwNTYw*_ga_4ETWR1HF6K*czE3NzE5MTI3MTgkbzgkZzEkdDE3NzE5MTI3MjckajUxJGwwJGgw">会社案内</a></li>
+                    <li><a href="https://www.kurasushi.co.jp/company/ir/?_ga=2.47471271.1034545711.1771650560-1362875877.1771650560&_gl=1*bhqs92*_ga*MTM2Mjg3NTg3Ny4xNzcxNjUwNTYw*_ga_4ETWR1HF6K*czE3NzE5MTI3MTgkbzgkZzEkdDE3NzE5MTI4NDYkajYwJGwwJGgw">IR情報</a></li>
+                    <li><a href="https://www.kurasushi.co.jp/company/csr/?_ga=2.15051830.1034545711.1771650560-1362875877.1771650560&_gl=1*m11kzq*_ga*MTM2Mjg3NTg3Ny4xNzcxNjUwNTYw*_ga_4ETWR1HF6K*czE3NzE5MTI3MTgkbzgkZzEkdDE3NzE5MTI4NTgkajQ4JGwwJGgw">CSR活動</a></li>
+                    <li><a href="https://www.kurasushi.co.jp/company/recruit/?_ga=2.15051830.1034545711.1771650560-1362875877.1771650560&_gl=1*1672yz6*_ga*MTM2Mjg3NTg3Ny4xNzcxNjUwNTYw*_ga_4ETWR1HF6K*czE3NzE5MTI3MTgkbzgkZzEkdDE3NzE5MTI4ODMkajIzJGwwJGgw">採用情報</a></li>
+                    <li><a href="https://kura-job.net/jobfind-pc/">アルバイト・パート募集</a></li>
+                </ul>
+            </div>
+            <div class="nav-col">
+                <h3>Globalサイト</h3>
+                <ul>
+                    <li><a href="https://kurasushi.com/">KURA Sushi USA, Inc.</a></li>
+                    <li><a href="https://www.kurasushi.tw/">亞洲藏壽司股份有限公司</a></li>
+                </ul>
+            </div>
+            <div class="nav-col no-title">
+                <ul>
+                    <li><a href="https://www.kurasushi.co.jp/company/btob/storeland.php?_ga=2.35045025.1034545711.1771650560-1362875877.1771650560&_gl=1*vhpw6n*_ga*MTM2Mjg3NTg3Ny4xNzcxNjUwNTYw*_ga_4ETWR1HF6K*czE3NzE5MTI3MTgkbzgkZzEkdDE3NzE5MTI5NzIkajUkbDAkaDA.">店舗用地募集</a></li>
+                    <li><a href="https://www.kurasushi.co.jp/company/btob/local.php?_ga=2.35045025.1034545711.1771650560-1362875877.1771650560&_gl=1*9i015t*_ga*MTM2Mjg3NTg3Ny4xNzcxNjUwNTYw*_ga_4ETWR1HF6K*czE3NzE5MTI3MTgkbzgkZzEkdDE3NzE5MTI5OTIkajYwJGwwJGgw">ご当地食材募集</a></li>
+                    <li class="mt-20"><a href="https://www.kurasushi.co.jp/contact/?_ga=2.35045025.1034545711.1771650560-1362875877.1771650560&_gl=1*1g5t1a5*_ga*MTM2Mjg3NTg3Ny4xNzcxNjUwNTYw*_ga_4ETWR1HF6K*czE3NzE5MTI3MTgkbzgkZzEkdDE3NzE5MTMwMTQkajM4JGwwJGgw">お問い合わせ</a></li>
+                    <li><a href="https://www.kurasushi.co.jp/policy/?_ga=2.43488165.1034545711.1771650560-1362875877.1771650560&_gl=1*t43wyb*_ga*MTM2Mjg3NTg3Ny4xNzcxNjUwNTYw*_ga_4ETWR1HF6K*czE3NzE5MTI3MTgkbzgkZzEkdDE3NzE5MTMwNTYkajYwJGwwJGgw">プライバシーポリシー</a></li>
+                    <li><a href="https://www.kurasushi.co.jp/policy/socialmedia.html?_ga=2.206413587.1034545711.1771650560-1362875877.1771650560&_gl=1*1poi98o*_ga*MTM2Mjg3NTg3Ny4xNzcxNjUwNTYw*_ga_4ETWR1HF6K*czE3NzE5MTI3MTgkbzgkZzEkdDE3NzE5MTMwNTYkajYwJGwwJGgw">ソーシャルメディアポリシー</a></li>
+                   
+                </ul>
+            </div>
+        </nav>
+
+        <div class="allergy-btn-wrap">
+            <a href="https://www.kurasushi.co.jp/app/app_allergen.html" class="allergy-btn">アレルギー・原材料・原産地情報</a>
+        </div>
+
+        <div class="sns-box">
+            <div class="sns-top">
+                <span class="sns-label">くら寿司公式SNSで最新情報を配信中</span>
+                <div class="sns-icons">
+                    <a href="https://www.youtube.com/channel/UC9DcLCVMjjiuyuc4_deD0Pw"><img src="https://www.kurasushi.co.jp/common/images/icon_sns_yt.svg" alt="YouTube"></a>
+                    <a href="https://x.com/mutenkurasushi"><img src="https://www.kurasushi.co.jp/common/images/icon_sns_x.svg" alt="트위터"></a>
+                    <a href="https://www.facebook.com/Kurasushi"><img src="https://www.kurasushi.co.jp/common/images/icon_sns_fb.svg" alt="Facebook"></a>
+                         <a href="https://www.instagram.com/kurasushi.fan/"><img src="https://www.kurasushi.co.jp/common/images/icon_sns_in.png" alt="Facebook"></a>
+            
+                  </div>
+            </div>
+            <div class="sns-bottom">
+                <a href="https://www.kurasushi.co.jp/policy/socialmedia.html" class="sns-policy">ソーシャルメディアポリシー</a>
+            </div>
+        </div>
+<div class="footer-bottom">
+    <div class="bottom-logo">
+        <a href="kura.html">
+            <img src="logo.png" alt="くら寿司 ロゴ" class="bottom-logo" />
+        </a>
+    </div>
+    <p class="copyright">Copyright Kura Sushi, Inc. All Rights Reserved.</p>
+</div>
+                
+           
+    </div>
+
+    <div class="footer-pattern">
+        <a href="#" class="btn-top"></a>
+    </div>
+</footer>
+
+    </main>
+
+    <script src="./omochikaeri.js"></script>
+    <script src="./footer.css"></script>
+    <script src="./kura.js"></script>
+  </body>
+</html>

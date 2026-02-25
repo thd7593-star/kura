@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+      <link rel="stylesheet" href="kura.css" />
+      <link rel="stylesheet" href="./footer.css" />
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=M+PLUS+1+Code:wght@100..700&family=Noto+Serif+JP:wght@200..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=M+PLUS+1+Code:wght@100..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic&family=Google+Sans+Flex:opsz,wght@6..144,1..1000&family=Sawarabi+Gothic&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      footer {
+        font-family: "M PLUS 1 Code", monospace;
+      }
+      body,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      p,
+      a,
+      li,
+      span,
+      button {
+        font-family: "Noto Serif JP", serif;
+        font-optical-sizing: auto;
+        font-style: normal;
+      }
+    </style>
+
+    <style>
+      body {
+        margin: 0;
+        padding: 20px;
+        text-align: center; /* 버튼을 중앙에 놓기 위해 추가 */
+      }
+
+      img {
+        display: block; /* 이미지 아래 공백 제거 및 블록화 */
+        max-width: 70%;
+        height: auto;
+        margin: 10px auto; /* 가로 중앙 정렬 및 위쪽 여백 10px */
+      }
+
+      button {
+        width: 100%; /* 컨테이너 안에서 가로 확보 */
+        max-width: 265px;
+        height: 50px;
+
+        display: block; /* block으로 설정해야 margin: 0 auto가 작동합니다 */
+        margin: 0 auto;
+
+        background: url(https://www.kurasushi.co.jp/topic/images/btn_close_popup.png)
+          no-repeat center;
+        background-size: contain;
+
+        margin-top: 20px; /* 이미지와의 간격 */
+        overflow: hidden;
+        border: 1px solid rgb(178, 177, 177);
+        border-radius: 5px;
+        text-indent: -9999px; /* 버튼 안의 글자를 화면 밖으로 밀어내기 (이미지만 보이게) */
+
+        cursor: pointer;
+      }
+      button:hover {
+        border-color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo-area">
+        <a href="kura.html" aria-label="くら寿司 ホームへ">
+          <img src="logo.png" alt="くら寿司 ロゴ" class="logo" />
+        </a>
+      </div>
+
+      
+    </header>
+
+    <div class="container">
+      <img
+        src="https://www.kurasushi.co.jp/upload/251031dashiudon_LP.jpg"
+        alt=""
+      />
+      <button class="btn" onclick="window.close()">
+        このウィンドウを閉じる
+      </button>
+    </div>
+    <br>
+<!-- 푸터 -->
+<footer class="kura-footer">
+
+    <p class="copyright">Copyright Kura Sushi, Inc. All Rights Reserved.</p>
+</div>
+                
+           
+    </div>
+<br>
+<br>
+<br>
+    <div class="footer-pattern">
+        <a href="#" class="btn-top"></a>
+    </div>
+</footer>
+
+    <script src="kura.js"></script>
+    <script src="./footer.js"></script>
+  </body>
+</html>

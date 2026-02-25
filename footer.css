@@ -1,0 +1,271 @@
+.kura-footer {
+  background-color: #efefef;
+  padding-top: 60px;
+
+  font-family: "M PLUS 1 Code", monospace;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.nav-col h3 {
+  font-family: "BIZ UDPGothic", sans-serif;
+  font-weight: 700;
+  font-size: 9px;
+  margin-bottom: 18px;
+  color: #333;
+}
+
+.nav-col ul li a {
+  font-family: "BIZ UDPGothic", sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "BIZ UDPGothic", sans-serif;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.kura-footer {
+  background-color: #efefef;
+  padding-top: 60px;
+}
+
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-nav {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.nav-col h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.nav-col ul li {
+  font-size: 13px;
+  margin-bottom: 8px;
+  color: #666;
+  position: relative;
+  padding-left: 12px;
+}
+
+/* 메뉴 ??꺽쇠(>) 구현 */
+.nav-col ul li::before {
+  content: ">";
+  position: absolute;
+  left: 0;
+  font-size: 10px;
+  color: #666;
+  top: 1px;
+}
+
+.mt-20 {
+  margin-top: 25px !important;
+}
+
+.allergy-btn-wrap {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.allergy-btn {
+  display: inline-block;
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 18px 60px;
+  font-size: 19px;
+  color: #333;
+  position: relative;
+}
+
+.allergy-btn::after {
+  content: ">";
+  margin-left: 10px;
+}
+
+.sns-box {
+  background: #fff;
+  padding: 8px 8px;
+  margin-bottom: 22px;
+  text-align: center;
+  display: grid;
+  justify-items: center;
+  align-content: center;
+  row-gap: 6px;
+}
+
+.sns-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin: 0;
+  width: auto;
+}
+
+.sns-label {
+  font-family: "BIZ UDPGothic", sans-serif;
+  font-size: 13px;
+  color: #393939;
+  font-weight: bold;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.sns-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.sns-icons img {
+  width: 40px;
+  height: 40px;
+  display: block;
+}
+
+.sns-policy {
+  font-family: "BIZ UDPGothic", sans-serif;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: #393939;
+  text-decoration: none;
+}
+
+.sns-bottom {
+  margin: 0;
+  line-height: 1;
+}
+
+.footer-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-bottom: 40px;
+}
+
+.bottom-logo img {
+  width: 150px;
+  margin-bottom: 15px;
+  display: block;
+}
+
+.copyright {
+  font-size: 13px;
+  color: #414141;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-bottom: 40px;
+}
+
+.bottom-logo img {
+  width: 125px;
+  margin-bottom: 15px;
+}
+.copyright {
+  font-family: "BIZ UDPGothic", sans-serif;
+  font-size: 11px;
+  color: #414141;
+}
+
+.footer-pattern {
+  height: 56px;
+  background-image: url("bg_pattern_kura.gif");
+  background-repeat: repeat;
+  background-position: left top;
+  background-size: 13px 13px;
+  position: relative;
+}
+
+.btn-top {
+  position: absolute;
+  right: 20px;
+  top: -25px;
+  width: 50px;
+  height: 50px;
+  background: #000
+    url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white"><path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/></svg>')
+    no-repeat center;
+  background-size: 30px;
+  border-radius: 50%;
+}
+
+.sns-policy::before {
+  content: ">";
+  margin-right: 8px;
+  font-size: 12px;
+  line-height: 1;
+}
+
+/* SNS box compact hard override */
+.kura-footer .sns-box {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 4px !important;
+  padding: 40px 60px !important;
+  margin: 0 auto 12px !important;
+  min-height: 0 !important;
+  height: auto !important;
+}
+
+.kura-footer .sns-top {
+  display: inline-flex !important;
+  width: auto !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 30px !important;
+  margin: 0 !important;
+  line-height: 1 !important;
+}
+
+.kura-footer .sns-label {
+  margin: 0 !important;
+  line-height: 1.15 !important;
+}
+
+.kura-footer .sns-icons {
+  gap: 25px !important;
+}
+
+.kura-footer .sns-icons img {
+  width: 36px !important;
+  height: 36px !important;
+}
+
+.kura-footer .sns-bottom {
+  margin: 0 !important;
+  padding: 0 !important;
+  line-height: 1 !important;
+}
+
+.kura-footer .sns-policy {
+  margin: 0 !important;
+  line-height: 1.1 !important;
+}

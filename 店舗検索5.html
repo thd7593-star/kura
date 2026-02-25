@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">  
+  
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?
+family=Noto+Serif+JP:wght@200..900&
+family=M+PLUS+1+Code:wght@100..700&
+family=BIZ+UDPGothic&
+family=Sawarabi+Gothic&
+family=Google+Sans+Flex:opsz,wght@6..144,100..1000&
+display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="店舗検索5.css">
+  <link rel="stylesheet" href="./kura.css">
+  <link rel="stylesheet" href="./footer.css">
+
+
+
+
+
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    
+    <link rel="stylesheet" href="店舗検索5.css">
+
+    
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1+Code:wght@100..700&family=Noto+Serif+JP:wght@200..900&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=M+PLUS+1+Code:wght@100..700&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic&family=Google+Sans+Flex:opsz,wght@6..144,1..1000&family=Sawarabi+Gothic&display=swap" rel="stylesheet">
+  <style>
+    footer { font-family: "M PLUS 1 Code", monospace; }
+    body, h1, h2, h3, h4, h5, h6, p, a, li, span, button {
+      font-family: "Noto Serif JP", serif;
+      font-optical-sizing: auto;
+      font-style: normal;
+    }
+
+    </style>
+
+</head> <!--Hiragino Sans W3, 店舗検索, 現在地から探す, キーワードで探す!-->
+
+<body>
+  <header class="header">
+      <div class="logo-area">
+         <a href="kura.html" aria-label="くら寿司 ホームへ">
+           <img src="logo.png" alt="くら寿司 ロゴ" class="logo" />
+         </a>
+      </div>
+
+      <!-- 메인 메뉴 -->
+      <nav class="nav">
+        <ul class="menu">
+ <li><a href="kura.html">ホーム</a></li>
+          <li><a href="./osusume.html">おすすめ情報</a></li>
+          <li><a href="./店舗検索5.html">店舗検索</a></li>
+          <li><a href="./jy_kura_index_menu.html">メニュー</a></li>
+          <li><a href="./omochikaeri.html">お持ち帰り寿司</a></li>
+        </ul>
+      </nav>
+      
+      <!-- 오른쪽 영역 -->
+       
+      <div class="right-area">
+        <div class="language-selector">
+          <button class="language-btn" type="button" aria-expanded="false">Language</button>
+          <ul class="language-list">
+     <li><a href="https://www.kurasushi.co.jp/en/">English</a></li>
+            <li><a href="https://www.kurasushi.co.jp/zh/">中文（簡体）</a></li>
+            <li><a href="https://www.kurasushi.co.jp/zhb/">中文（繁体）</a></li>
+            <li><a href="https://www.kurasushi.co.jp/ko/">韓国</a></li>
+
+          </ul>
+        </div>
+      </div>
+    </header>
+      
+
+    <main>
+
+        <header class="page-header">
+
+            <h2>店舗検索</h2>
+
+        </header>
+
+        <section class="container">
+
+            <div class="areafind">
+
+                <h2>エリアから探す</h2>
+                
+            </br>
+                
+                <button class="where">
+                <svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M4 12 L19 5 L13 20 L11 13 Z"></path>
+                </svg>現在地から探す</button>
+
+        </br>
+            <div class="list-container">
+            <div class="btngroup">
+
+               
+
+                 <button class="area-btn"  id="all-area-btn">全国<span class="arrow">▼</span></button>
+
+                <button class="area-btn" id="hok-area-btn">北海道-東北<span class="arrow">▼</span></button>
+
+                <button class="area-btn" id="kanto-area-btn">関東<span class="arrow">▼</span></button>
+
+                <button class="area-btn" id="hoku-area-btn">北陸 - 高信越<span class="arrow">▼</span></button>
+
+                <button class="area-btn" id="dokai-area-btn">東海<span class="arrow">▼</span></button>
+
+                <button class="area-btn" id="kansai-area-btn">関西<span class="arrow">▼</span></button>
+
+                <button class="area-btn" id="chu-area-btn">中国<span class="arrow">▼</span></button>
+
+                <button class="area-btn" id="siko-area-btn">四国<span class="arrow">▼</span></button>
+
+                <button class="area-btn" id="khu-area-btn">九州 - 沖縄<span class="arrow">▼</span></button>
+
+                </div>
+
+                 <div class="sub-area-all sub-area" id="sub-area">
+
+                <button class="area-btn" data-url="https://shop.kurasushi.co.jp/hokkaido">北海道</button>
+
+                <button class="area-btn" data-url="https://shop.kurasushi.co.jp/aomori">青森県</button>
+
+                <button class="area-btn" data-url="https://shop.kurasushi.co.jp/iwate">岩手県</button>
+
+                <button class="area-btn" data-url="https://shop.kurasushi.co.jp/miyagi">宮城県</button>
+
+                <button class="area-btn" data-url="https://shop.kurasushi.co.jp/akita">秋田県</button>
+
+                <button class="area-btn" data-url="https://shop.kurasushi.co.jp/yamagata">山形県</button>
+
+              </div>
+                <div class="sub-area-all sub-area2" id="sub-area2">
+
+                <button class="area-btn" data-url="https://shop.kurasushi.co.jp/hokkaido">北海道</button>
+
+                <button class="area-btn" data-url="https://shop.kurasushi.co.jp/aomori">青森県</button>
+
+                <button class="area-btn" data-url="https://shop.kurasushi.co.jp/iwate">岩手県</button>
+
+                <button class="area-btn" data-url="https://shop.kurasushi.co.jp/miyagi">宮城県</button>
+
+                <button class="area-btn" data-url="https://shop.kurasushi.co.jp/akita">秋田県</button>
+
+                <button class="area-btn" data-url="https://shop.kurasushi.co.jp/yamagata">山形県</button>
+
+                </div>
+
+                 <div class="sub-area-all sub-area3" id="sub-area3">
+
+                <button class="area-btn" data-url="https://shop.kurasushi.co.jp/ibaraki">茨城県</button>
+
+                <button class="area-btn" data-url="https://shop.kurasushi.co.jp/tochigi">栃木県</button>
+
+                <button class="area-btn" data-url="https://shop.kurasushi.co.jp/gunma">群馬県</button>
+
+                <button class="area-btn" data-url="https://shop.kurasushi.co.jp/saitama">埼玉県</button>
+
+                <button class="area-btn" data-url="https://shop.kurasushi.co.jp/chiba">千葉県</button>
+
+                <button class="area-btn" data-url="https://shop.kurasushi.co.jp/tokyo">東京都</button>
+
+                </div>
+
+                 <div class="sub-area-all sub-area4" id="sub-area4">
+
+                <button class="area-btn" data-url="https://shop.kurasushi.co.jp/niigata">新潟県</button>
+
+                <button class="area-btn" data-url="https://shop.kurasushi.co.jp/toyama">富山県</button>
+
+                <button class="area-btn" data-url="https://shop.kurasushi.co.jp/ishikawa">石川県</button>
+
+                <button class="area-btn" data-url="https://shop.kurasushi.co.jp/fukui">福井県</button>
+
+                <button class="area-btn" data-url="https://shop.kurasushi.co.jp/yamanashi">山梨県</button>
+
+                <button class="area-btn" data-url="https://shop.kurasushi.co.jp/nagano">長野県</button>
+
+                </div>
+
+                 <div class="sub-area-all sub-area5" id="sub-area5">
+
+                <button class="area-btn" data-url="https://shop.kurasushi.co.jp/gifu">岐阜県</button>
+
+                <button class="area-btn" data-url="https://shop.kurasushi.co.jp/shizuoka">静岡県</button>
+
+                <button class="area-btn" data-url="https://shop.kurasushi.co.jp/aichi">愛知県</button>
+
+                <button class="area-btn" data-url="https://shop.kurasushi.co.jp/mie">三重県</button>
+
+                </div>
+
+                 <div class="sub-area-all sub-area6" id="sub-area6">
+
+                <button class="area-btn" data-url="https://shop.kurasushi.co.jp/shiga">滋賀県</button>
+
+                <button class="area-btn" data-url="https://shop.kurasushi.co.jp/kyoto">京都府</button>
+
+                <button class="area-btn" data-url="https://shop.kurasushi.co.jp/osaka">大阪府</button>
+
+                <button class="area-btn" data-url="https://shop.kurasushi.co.jp/hyogo">兵庫県</button>
+
+                <button class="area-btn" data-url="https://shop.kurasushi.co.jp/nara">奈良県</button>
+
+                <button class="area-btn" data-url="https://shop.kurasushi.co.jp/wakayama">和歌山県</button>
+
+                </div>
+
+                 <div class="sub-area-all sub-area7" id="sub-area7">
+
+                <button class="area-btn" data-url="https://shop.kurasushi.co.jp/tottori">鳥取県</button>
+
+                <button class="area-btn" data-url="https://shop.kurasushi.co.jp/shimane">島根県</button>
+
+                <button class="area-btn" data-url="https://shop.kurasushi.co.jp/okayama">岡山県</button>
+
+                <button class="area-btn" data-url="https://shop.kurasushi.co.jp/hiroshima">広島県</button>
+
+                <button class="area-btn" data-url="https://shop.kurasushi.co.jp/yamaguchi">山口県</button>
+
+                </div>
+
+                 <div class="sub-area-all sub-area8" id="sub-area8">
+
+                <button class="area-btn" data-url="https://shop.kurasushi.co.jp/tokushima">徳島県</button>
+
+                <button class="area-btn" data-url="https://shop.kurasushi.co.jp/kagawa">香川県</button>
+
+                <button class="area-btn" data-url="https://shop.kurasushi.co.jp/ehime">愛媛県</button>
+
+                <button class="area-btn" data-url="https://shop.kurasushi.co.jp/kochi">高知県</button>
+
+                </div>
+
+                 <div class="sub-area-all sub-area9" id="sub-area9">
+
+                <button class="area-btn" data-url="https://shop.kurasushi.co.jp/fukuoka">福岡県</button>
+
+                <button class="area-btn" data-url="https://shop.kurasushi.co.jp/saga">佐賀県</button>
+
+                <button class="area-btn" data-url="https://shop.kurasushi.co.jp/nagasaki">長崎県</button>
+
+                <button class="area-btn" data-url="https://shop.kurasushi.co.jp/kumamoto">熊本県</button>
+
+                <button class="area-btn" data-url="https://shop.kurasushi.co.jp/oita">大分県</button>
+
+                <button class="area-btn" data-url="https://shop.kurasushi.co.jp/miyazaki">宮崎県</button>
+
+                </div>
+
+                
+                </div>
+
+
+           
+
+           
+
+        </br>
+
+            <div class="keyword">
+
+                <h2>キーワードで探す</h2>
+
+            </br>
+
+                <input type="text" placeholder="地名-店舗名を入力">
+
+            </div>
+
+        </br>
+
+            <div class="checkbox">
+
+                <h2>条件で絞り込んで探す</h2>
+
+            </br>
+
+                <div class="service"><h2>提供サービス</h2></div>
+
+                <div class="cbgroup">
+
+                <label><input type="checkbox">スマイルチャレンジ</label>
+
+                <label><input type="checkbox">プレゼントシステム</label>
+
+                <label><input type="checkbox">スロープ対応</label>
+
+                <label><input type="checkbox">多機能トイレ対応</label>
+
+                <label><input type="checkbox">車いす用席対応</label>
+
+                <label><input type="checkbox">エレベーター設置</label>
+
+                <label><input type="checkbox">2階以上</label>
+
+                <label><input type="checkbox">スマホで注文</label>
+
+                <label><input type="checkbox">スマホでお持ち帰り</label>
+
+                <label><input type="checkbox">車でお持ち帰り</label>
+
+                <label><input type="checkbox">スマートくら寿司</label>
+
+                <label><input type="checkbox">CHARGE SPOT</label>
+
+                <label><input type="checkbox">無料WIFI</label>
+
+                <label><input type="checkbox">グローバル旗艦店</label>
+
+                <label><input type="checkbox">プラス型店舗</label>
+
+                <label><input type="checkbox">1皿100円(税込110円)~</label>
+
+                <label><input type="checkbox">1皿115円~</label>
+
+                <label><input type="checkbox">1皿120円~</label>
+
+                <label><input type="checkbox">1皿130円~</label>
+
+                <label><input type="checkbox">1皿150円~</label>
+
+                <label><input type="checkbox">どこでもくら寿司</label>
+
+                <label><input type="checkbox">出前館</label>
+
+                <label><input type="checkbox">Uber Eats</label>
+
+                <label><input type="checkbox">Wolt</label>
+
+                <label><input type="checkbox">menu</label>
+
+                <label><input type="checkbox">LINEのご予約サービス</label>
+
+             </div>
+
+            </div>
+
+            <div class="last-paper">
+
+                <button class="reset-btn">リセット</button>
+
+                <button class="keyword-search">このキーワード・絞り込みで検索</button>
+
+            </div>
+             <section class="store-open-news" aria-label="新店オープン情報">
+                <ul class="store-open-list">
+                    <li>
+                        <a href="https://shop.kurasushi.co.jp/tokyo" class="store-open-link">
+                            <span class="store-open-date">2026.02.05</span>
+                            <span class="store-open-text">御徒町店が2/5にオープンしました！（東京都台東区）</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://shop.kurasushi.co.jp/kyoto" class="store-open-link">
+                            <span class="store-open-date">2026.01.29</span>
+                            <span class="store-open-text">プラス型店舗 京都寺町通店が1/29にオープンしました！（京都市中京区）</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://shop.kurasushi.co.jp/saitama" class="store-open-link">
+                            <span class="store-open-date">2025.11.27</span>
+                            <span class="store-open-text">プラス型店舗 ルミネ大宮店が11/27にオープンしました！（埼玉県さいたま市）</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://shop.kurasushi.co.jp/tokyo" class="store-open-link">
+                            <span class="store-open-date">2025.11.06</span>
+                            <span class="store-open-text">蒲田東店が11/6にオープンしました！（東京都大田区）</span>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+
+            
+        </section>
+<!-- 푸터 -->
+<footer class="kura-footer">
+    <div class="footer-inner">
+        <nav class="footer-nav">
+            <div class="nav-col">
+                <h3>公式サイト</h3>
+                <ul>
+                    <li><a href="#">おすすめ情報</a></li>
+                    <li><a href="#">店舗検索</a></li>
+                    <li><a href="#">メニュー</a></li>
+                    <li><a href="#">お持ち帰り寿司</a></li>
+                    <li class="mt-20"><a href="#">くら寿司プレスリリース</a></li>
+                </ul>
+            </div>
+
+              <body>
+  
+            <div class="nav-col">
+                <h3>企業サイト</h3>
+                <ul>
+                    <li><a href="https://www.kurasushi.co.jp/company/?_ga=2.47471271.1034545711.1771650560-1362875877.1771650560&_gl=1*1xc2jz8*_ga*MTM2Mjg3NTg3Ny4xNzcxNjUwNTYw*_ga_4ETWR1HF6K*czE3NzE5MTI3MTgkbzgkZzEkdDE3NzE5MTI3MjckajUxJGwwJGgw">会社案内</a></li>
+                    <li><a href="https://www.kurasushi.co.jp/company/ir/?_ga=2.47471271.1034545711.1771650560-1362875877.1771650560&_gl=1*bhqs92*_ga*MTM2Mjg3NTg3Ny4xNzcxNjUwNTYw*_ga_4ETWR1HF6K*czE3NzE5MTI3MTgkbzgkZzEkdDE3NzE5MTI4NDYkajYwJGwwJGgw">IR情報</a></li>
+                    <li><a href="https://www.kurasushi.co.jp/company/csr/?_ga=2.15051830.1034545711.1771650560-1362875877.1771650560&_gl=1*m11kzq*_ga*MTM2Mjg3NTg3Ny4xNzcxNjUwNTYw*_ga_4ETWR1HF6K*czE3NzE5MTI3MTgkbzgkZzEkdDE3NzE5MTI4NTgkajQ4JGwwJGgw">CSR活動</a></li>
+                    <li><a href="https://www.kurasushi.co.jp/company/recruit/?_ga=2.15051830.1034545711.1771650560-1362875877.1771650560&_gl=1*1672yz6*_ga*MTM2Mjg3NTg3Ny4xNzcxNjUwNTYw*_ga_4ETWR1HF6K*czE3NzE5MTI3MTgkbzgkZzEkdDE3NzE5MTI4ODMkajIzJGwwJGgw">採用情報</a></li>
+                    <li><a href="https://kura-job.net/jobfind-pc/">アルバイト・パート募集</a></li>
+                </ul>
+            </div>
+            <div class="nav-col">
+                <h3>Globalサイト</h3>
+                <ul>
+                    <li><a href="https://kurasushi.com/">KURA Sushi USA, Inc.</a></li>
+                    <li><a href="https://www.kurasushi.tw/">亞洲藏壽司股份有限公司</a></li>
+                </ul>
+            </div>
+            <div class="nav-col no-title">
+                <ul>
+                    <li><a href="https://www.kurasushi.co.jp/company/btob/storeland.php?_ga=2.35045025.1034545711.1771650560-1362875877.1771650560&_gl=1*vhpw6n*_ga*MTM2Mjg3NTg3Ny4xNzcxNjUwNTYw*_ga_4ETWR1HF6K*czE3NzE5MTI3MTgkbzgkZzEkdDE3NzE5MTI5NzIkajUkbDAkaDA.">店舗用地募集</a></li>
+                    <li><a href="https://www.kurasushi.co.jp/company/btob/local.php?_ga=2.35045025.1034545711.1771650560-1362875877.1771650560&_gl=1*9i015t*_ga*MTM2Mjg3NTg3Ny4xNzcxNjUwNTYw*_ga_4ETWR1HF6K*czE3NzE5MTI3MTgkbzgkZzEkdDE3NzE5MTI5OTIkajYwJGwwJGgw">ご当地食材募集</a></li>
+                    <li class="mt-20"><a href="https://www.kurasushi.co.jp/contact/?_ga=2.35045025.1034545711.1771650560-1362875877.1771650560&_gl=1*1g5t1a5*_ga*MTM2Mjg3NTg3Ny4xNzcxNjUwNTYw*_ga_4ETWR1HF6K*czE3NzE5MTI3MTgkbzgkZzEkdDE3NzE5MTMwMTQkajM4JGwwJGgw">お問い合わせ</a></li>
+                    <li><a href="https://www.kurasushi.co.jp/policy/?_ga=2.43488165.1034545711.1771650560-1362875877.1771650560&_gl=1*t43wyb*_ga*MTM2Mjg3NTg3Ny4xNzcxNjUwNTYw*_ga_4ETWR1HF6K*czE3NzE5MTI3MTgkbzgkZzEkdDE3NzE5MTMwNTYkajYwJGwwJGgw">プライバシーポリシー</a></li>
+                    <li><a href="https://www.kurasushi.co.jp/policy/socialmedia.html?_ga=2.206413587.1034545711.1771650560-1362875877.1771650560&_gl=1*1poi98o*_ga*MTM2Mjg3NTg3Ny4xNzcxNjUwNTYw*_ga_4ETWR1HF6K*czE3NzE5MTI3MTgkbzgkZzEkdDE3NzE5MTMwNTYkajYwJGwwJGgw">ソーシャルメディアポリシー</a></li>
+                   
+                </ul>
+            </div>
+        </nav>
+
+        <div class="allergy-btn-wrap">
+            <a href="https://www.kurasushi.co.jp/app/app_allergen.html" class="allergy-btn">アレルギー・原材料・原産地情報</a>
+        </div>
+
+        <div class="sns-box">
+            <div class="sns-top">
+                <span class="sns-label">くら寿司公式SNSで最新情報を配信中</span>
+                <div class="sns-icons">
+                    <a href="https://www.youtube.com/channel/UC9DcLCVMjjiuyuc4_deD0Pw"><img src="https://www.kurasushi.co.jp/common/images/icon_sns_yt.svg" alt="YouTube"></a>
+                    <a href="https://x.com/mutenkurasushi"><img src="https://www.kurasushi.co.jp/common/images/icon_sns_x.svg" alt="트위터"></a>
+                    <a href="https://www.facebook.com/Kurasushi"><img src="https://www.kurasushi.co.jp/common/images/icon_sns_fb.svg" alt="Facebook"></a>
+                         <a href="https://www.instagram.com/kurasushi.fan/"><img src="https://www.kurasushi.co.jp/common/images/icon_sns_in.png" alt="Facebook"></a>
+            
+                  </div>
+            </div>
+            <div class="sns-bottom">
+                <a href="https://www.kurasushi.co.jp/policy/socialmedia.html" class="sns-policy">ソーシャルメディアポリシー</a>
+            </div>
+        </div>
+<div class="footer-bottom">
+    <div class="bottom-logo">
+        <a href="kura.html">
+            <img src="logo.png" alt="くら寿司 ロゴ" class="bottom-logo" />
+        </a>
+    </div>
+    <p class="copyright">Copyright Kura Sushi, Inc. All Rights Reserved.</p>
+</div>
+                
+           
+    </div>
+
+    <div class="footer-pattern">
+        <a href="#" class="btn-top"></a>
+    </div>
+</footer>
+    </main>
+
+    
+    <script src="./店舗検索5.js"></script>
+     <script src="kura.js"></script>
+    
+</body>
+
+</html> 

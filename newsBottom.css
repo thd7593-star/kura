@@ -1,0 +1,219 @@
+.service-section {
+  display: flex;
+  align-items: flex-start;
+  margin: 0 auto;
+  width: 55%;
+  gap: 20px;
+  padding: 20px;
+}
+hr {
+  margin: 0 auto;
+  /* margin-top: 15px; */
+  width: 73%;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.title {
+  font-size: 16px;
+  /* font-weight: bold; */
+  white-space: nowrap;
+  margin: 0;
+  padding-top: 10px;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap; /* 자리가 없으면 다음 줄로 넘김 */
+  gap: 8px 12px; /* 상하 8px, 좌우 12px 간격 */
+  flex: 1; /*남은 가로 공간 전체 차지*/
+  margin-left: 80px;
+}
+
+.service-item {
+  /* 4열 배치를 위한 계산: (100% / 4) - (간격 보정) */
+  flex: 0 0 calc(25% - 9px);
+
+  box-sizing: border-box;
+  padding: 5px 5px;
+  border-radius: 20px;
+  text-align: center;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+/* 활성/비활성 상태 스타일 */
+.service-item.active {
+  background-color: #595959;
+  color: #ffffff;
+}
+
+.service-item.disabled {
+  background-color: #f2f2f2;
+  color: #d1d1d1;
+}
+
+.flex-container img {
+  width: 100%;
+}
+
+.pdf-button {
+  /* 레이아웃 설정 */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0px; /* 아이콘과 텍스트 사이 간격 */
+
+  /* 디자인 설정 */
+  background-color: #222222; /* 어두운 배경색 */
+  color: #ffffff; /* 텍스트 흰색 */
+  text-decoration: none; /* 링크 밑줄 제거 */
+  padding: 5px; /* 버튼 내 여백 */
+  border-radius: 12px; /* 모서리 둥글게 */
+
+  /* 애니메이션 및 그림자 */
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* PDF 아이콘 크기 조절 */
+.pdf-icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+/* 텍스트 스타일 */
+.button-text {
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+}
+
+/* 마우스 호버 효과 */
+.pdf-button:hover {
+  background-color: #444444; /* 마우스 올렸을 때 조금 밝게 */
+  transform: translateY(-2px); /* 살짝 위로 뜨는 효과 */
+}
+/* 부모 컨테이너: 각 매장 정보를 세로로 나열 */
+.adress {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 8px; /* 요소들 사이의 세로 간격 */
+  margin-bottom: 24px;
+}
+
+/* 제목 부분: 로고와 텍스트를 한 줄로 (수정됨) */
+.adress-title {
+  display: flex;
+  align-items: center; /* 아이콘과 글자 높이 맞춤 */
+  gap: 10px; /* 아이콘과 글자 사이 간격 */
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+}
+.adress a {
+  text-decoration: none;
+  color: inherit;
+}
+/* 마우스를 올렸을 때도 파란색으로 변하지 않게 설정 */
+.adress-title-link:hover,
+.adress-title-link:active,
+.adress-title-link:visited {
+  color: inherit;
+  text-decoration: none;
+}
+
+.adress img {
+  width: 32px; /* 원본 이미지 비율에 맞춰 조정 */
+  height: auto;
+  display: block;
+}
+.adress-text {
+  font-size: 10pt;
+}
+
+.phone {
+  display: flex;
+}
+
+.phone img {
+  width: 20px;
+}
+.phone-num {
+  display: flex;
+  margin-left: 10px;
+  font-size: 15pt;
+}
+
+/* 버튼 css */
+.btn-reservation {
+  /* 구조 및 크기 */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 10px;
+  margin-top: 20px;
+
+  /* 배경 및 테두리 */
+  background-color: #ffffff;
+  border: 1.5px solid #000000; /* 검정색 외곽선 */
+  border-radius: 8px; /* 부드러운 라운드 처리 */
+
+  /* 텍스트 스타일 */
+  color: #000000;
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: none;
+
+  /* 애니메이션 및 커서 */
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+/* 호버 상태 (사용자 경험 개선) */
+.btn-reservation:hover {
+  background-color: #f8f8f8;
+  border-color: #333333;
+}
+
+/* 클릭 상태 */
+.btn-reservation:active {
+  transform: scale(0.98);
+}
+
+/* 1. 최상위 섹션 조절 */
+.map-section {
+  width: 50% !important; /* 화면의 절반으로 강제 제한 */
+  margin: 40px auto; /* 상하 여백 및 중앙 정렬 */
+  display: block; /* Flex 영향을 방지하기 위해 명시 */
+}
+
+/* 2. 지도를 감싸는 컨테이너 조절 */
+.map-container {
+  width: 100%; /* .map-section 너비를 100% 채움 */
+  overflow: hidden;
+  margin-bottom: 100px;
+}
+
+/* 3. 실제 지도(iframe) 조절 */
+.map-section iframe {
+  width: 100% !important; /* 부모(.map-container) 너비에 맞춤 */
+  height: 350px !important; /* 높이도 명시적으로 조절 가능 */
+  border-radius: 12px;
+  border: 1px solid #ddd;
+}
+
+/* 핵심: 부모부터 자식까지 너비 상속 구조를 명확히 함 */
+.map-section {
+  width: 55% !important;
+  margin: 0 auto;
+}
+
+.map-container,
+.map-container iframe {
+  width: 100% !important;
+}

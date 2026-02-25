@@ -1,0 +1,756 @@
+/* 1. 배경 (회색 체크무늬) - 바디에만 적용 */
+body {
+  margin: 0;
+  padding: 50px 0;
+  background-color: #fafafa;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: fixed; /* 화면 전체 */
+  inset: 0;
+  z-index: -1; /* 제일 뒤로 */
+
+  background-image:
+    linear-gradient(45deg, #f2f2f2 25%, transparent 25%),
+    linear-gradient(-45deg, #f2f2f2 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, #f2f2f2 75%),
+    linear-gradient(-45deg, transparent 75%, #f2f2f2 75%);
+
+  background-size: 200px 200px;
+  background-position:
+    0 0,
+    0 100px,
+    100px 100px,
+    100px 0;
+
+  opacity: 0.5; /* 투명도 조절 */
+  pointer-events: none;
+}
+
+/* 회색 배경 박스 */
+.price-115 {
+  background-color: #f2f2f2;
+  padding: 60px 0 30px;
+  font-family: "Yu Mincho", "Hiragino Mincho ProN", "Noto Serif JP", serif;
+  text-align: center;
+}
+
+.price-115 h1 {
+  width: 1000px;
+  margin: 0 auto 20px;
+  font-size: 26px;
+}
+/* (수정필요)버튼길이, 버튼서식, 안쪽 글씨체 */
+/* 버튼 정렬 */
+.menu-grid {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: flex-start;
+}
+
+/* 버튼 스타일 */
+.menu-grid {
+  width: 1000px;
+  margin: 30px auto 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* ⭐ 4열 고정 */
+  gap: 25px 25px;
+}
+
+.menu-btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  height: 60px;
+  background: #ffffff;
+  border: 1px solid #bfbfbf;
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+  letter-spacing: 1px;
+
+  transition: background 0.2s ease;
+}
+
+/* 아래 빨간 화살표 */
+.menu-btn::after {
+  content: "∨";
+  font-size: 14px;
+  color: #c40000;
+  margin-top: 4px;
+}
+
+/* hover 효과 (쿠라 느낌은 거의 변화 없음) */
+.menu-btn:hover {
+  background: #f3f3f3;
+}
+
+.perPrice {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 400; /*볼드제거*/
+  letter-spacing: 3px;
+  margin-bottom: 40px;
+
+  font-family: "Yu Mincho", "Hiragino Mincho ProN", "Noto Serif JP", serif;
+  border-bottom: 1px solid;
+  height: 100px;
+}
+
+/* 3. 메뉴 제목 (니기리) */
+.category-title {
+  text-align: center;
+  font-size: 32px;
+  font-weight: normal;
+  margin-bottom: 50px;
+  font-family: "serif"; /* 공식 사이트 특유의 폰트 느낌 */
+}
+/* にぎり부분 위아래 여백 제거 (추후 작업 예정) */
+/* 4. 메뉴 4열 정렬 */
+.nigiri-grid {
+  width: 1000px;
+  margin: 40px auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 70px 25px;
+  background-color: #ffffff;
+  padding: 40px;
+}
+
+.nigiri-title {
+  grid-column: 1 / -1; /* 4열 전체 차지 */
+  text-align: center;
+  font-size: 28px;
+  font-weight: 400; /* 볼드 제거 */
+  font-family: "Yu Mincho", "Hiragino Mincho ProN", serif; /* 쿠라 느낌 */
+}
+
+.menu-card {
+  text-align: left;
+}
+
+.menu-thumbnail img {
+  width: 204px;
+  height: 161px;
+  margin-bottom: 15px;
+}
+
+.menu-summary {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-summary li {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  margin-bottom: 5px;
+}
+
+/* 4. 우측 하단 상단 이동 버튼 스타일 */
+.scroll-top-btn {
+  position: fixed; /* 화면에 고정 */
+  bottom: 30px; /* 아래서 30px */
+  right: 30px; /* 오른쪽서 30px */
+  width: 50px;
+  height: 50px;
+  background-color: black; /* 검은 동그라미 */
+  color: white;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  z-index: 1000; /* 항상 맨 위에 */
+  transition: transform 0.2s;
+}
+
+.scroll-top-btn:hover {
+  transform: scale(1.1);
+}
+
+/* ===== 헤더 ===== */
+
+.click-heading {
+  margin-bottom: 15px;
+}
+.click-heading img {
+  height: 22px;
+  width: auto;
+}
+
+.menu-header {
+  position: relative;
+  width: 100%;
+  height: 260px;
+  overflow: hidden;
+}
+
+.menu-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.menu-title {
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+  height: 50px;
+}
+
+/* ===== 흰 박스 ===== */
+
+.content-wrapper {
+  width: 1000px;
+  margin: -60px auto 80px; /* ⭐ 위로 살짝 겹치게 */
+  background: #fff;
+  padding: 60px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  border-radius: 4px;
+}
+
+.content-wrapper h2 {
+  font-size: 26px;
+  margin-bottom: 20px;
+}
+.price-links {
+  display: flex;
+  justify-content: space-between; /* 양옆으로 쭉 펴지게 배치 */
+  gap: 15px;
+}
+
+.price-links a {
+  padding: 6px 12px;
+  border: 1px solid #000;
+  font-size: 14px;
+  text-decoration: none;
+  color: #000;
+}
+
+.price-links a:hover {
+  background: #000;
+  color: #fff;
+}
+
+.slider {
+  width: 100%;
+  height: 520px; /* ⭐ 높이 고정 (쿠라 비율) */
+  margin: 60px 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.slider-track {
+  display: flex;
+  align-items: center;
+  transition: transform 0.5s ease;
+}
+
+.slide {
+  flex: 0 0 40%;
+  margin: 0 10px;
+  transition: all 0.6s ease;
+  opacity: 0.3;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* ⭐ 꽉 채움 */
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+.slider-dots {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #ccc;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.dot.active {
+  background: #000;
+}
+
+.price-115-hr {
+  margin: 0 auto;
+  width: 1100px;
+  border: none;
+  height: 1px;
+  background: #111;
+}
+.content-wrapper hr {
+  width: 1000px;
+  border: none;
+  height: 1px;
+  background: #111;
+  margin: 0 auto 40px;
+}
+
+.price-links {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+.price-btn {
+  flex: 1; /* 4개가 동일한 너비를 가지도록 설정 */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+  background: #fff;
+  border-radius: 2px;
+}
+
+/* 오른쪽 화살표 */
+.price-btn::after {
+  content: "›";
+  font-size: 20px;
+  color: #999;
+  position: static;
+  transform: none;
+}
+
+/* hover 효과 */
+.price-btn:hover {
+  background: #111;
+  color: #fff;
+  border-color: #111;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+/* 색이 잘 안보여서 일단.. 다른색으로 점.. */
+.map {
+  width: 100%;
+  max-width: 1100px;
+  height: 1067px;
+  background: #dac2c2;
+  padding: 40px 0;
+  margin: 0 auto;
+  position: relative;
+}
+
+.japan-area {
+  width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between; /* 양끝 정렬 */
+  align-items: center; /* 세로 중앙 정렬 (이미지 높이가 다를 때 필수) */
+  padding: 30px 0; /* 위아래 여백 추가 */
+}
+.area-1 img {
+  width: 308px;
+  display: block;
+  height: 30px;
+}
+
+/* 셀렉트 박스 전체 감싸는 영역 스타일링 */
+.select-wrapper {
+  position: relative;
+  width: 450px; /* 이미지와 비슷하게 가로 길이 설정 */
+  height: 50px;
+  border: 1px solid #ccc;
+  background: #fff;
+  display: flex;
+  align-items: center;
+}
+
+/* 기본 화살표 제거 */
+.select-wrapper select {
+  width: 100%;
+  height: 100%;
+  border: none;
+  padding: 0 15px;
+  font-size: 16px;
+  appearance: none; /* 브라우저 기본 화살표 숨기기 */
+  -webkit-appearance: none;
+  cursor: pointer;
+}
+
+/* 오른쪽 빨간 화살표 버튼 영역 구현 */
+.select-wrapper::after {
+  content: "▼";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 50px;
+  height: 100%;
+  background-color: #e60012; /* 쿠라 스시 상징 빨간색 */
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none; /* 클릭 방해 금지 */
+}
+
+.map-image-wrap {
+  flex: 1;
+  position: relative;
+  min-height: 550px; /* 지도가 들어갈 충분한 높이 확보 */
+  overflow: visible;
+  background-color: transparent; /* 기존 회색 배경 제거 */
+  border: none; /* 기존 테두리 선 제거 */
+}
+
+/* 지도 조각들을 담은 컨테이너 */
+.map-real-japan {
+  position: absolute;
+  top: 0;
+  left: 40px; /* 좌측 버튼 메뉴들과의 간격 */
+  width: 600px;
+  height: 650px;
+}
+
+/* 각 조각의 공통 설정: map-image-wrap 안에서만 위치하도록 absolute 설정 */
+.hokkaido-path,
+.higashiJap-path,
+.nishiJap-path,
+.okinawa-path {
+  position: absolute;
+  z-index: 5;
+}
+
+/* 1. 각 지역 SVG 패스 색상*/
+.hokkaido-path svg path {
+  fill: #7cd3a1;
+}
+.higashiJap-path svg path {
+  fill: #59b1ff;
+}
+.nishiJap-path svg path {
+  fill: #ff7c7c;
+}
+.okinawa-path svg path {
+  fill: #ffcc33;
+}
+
+.hokkaido-path svg,
+.higashiJap-path svg,
+.nishiJap-path svg,
+.okinawa-path svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* --- 일본 지도 형상을 위한 좌표값 미세 조정 (예시값) --- */
+
+/* 3. 일본 지도 퍼즐 맞추기 */
+.hokkaido-path {
+  position: absolute;
+  width: 270px;
+  top: 0px;
+  left: 350px;
+}
+.higashiJap-path {
+  position: absolute;
+  width: 150px;
+  top: 148px;
+  left: 300px;
+}
+.nishiJap-path {
+  position: absolute;
+  width: 210px;
+  top: 300px;
+  left: 110px;
+}
+.okinawa-path {
+  position: absolute;
+  width: 215px;
+  top: 400px;
+  right: 450px;
+}
+
+/* 호버 효과 */
+.map-real-japan path:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+/* SVG 패스 기본 설정 */
+.map-real-japan path {
+  stroke: #ffffff; /* 지역 간 구분선(흰색) */
+  stroke-width: 1px;
+}
+
+/* 지도 섹션 배경 및 레이아웃 */
+.section-menu {
+  width: 100%;
+  background-color: #f2f2f2;
+  padding: 80px 0;
+  clear: both;
+  margin-top: 50px;
+  display: block;
+}
+
+/* SVG 패스 기본 설정 */
+.map-real-japan path {
+  stroke: #ffffff; /* 지역 간 구분선(흰색) */
+  stroke-width: 1px;
+}
+
+/* ===== 하단 버튼 영역 ===== */
+
+.bottom-tab {
+  background: #fff;
+  padding: 60px 0;
+  border-top: 1px solid #ddd;
+}
+
+.bottom-tab-inner {
+  width: 720px; /* ⭐ 전체 너비를 줄여 버튼이 길쭉하게 모이도록 제어 */
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 2열 유지 */
+  gap: 20px; /* 상하좌우 버튼 간격 */
+}
+
+.bottom-item {
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  height: 60px; /* ⭐ 세로 높이를 60px로 고정하여 얇게 만듦 */
+  transition: all 0.2s ease;
+  padding: 0;
+}
+
+.bottom-item a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+}
+
+.bottom-item img {
+  height: auto;
+  width: 75%;
+}
+
+/* 아래쪽 무텐쿠라(가운데 정렬) 버튼 설정 */
+.bottom-center {
+  grid-column: 1 / -1; /* 두 칸(전체)을 다 차지하게 함 */
+  width: 350px; /* ⭐ 윗줄 버튼 한 개와 동일한 너비로 설정 */
+  margin: 0 auto; /* 가운데 둥둥 뜨게 정렬 */
+}
+
+/* 지도 영역 */
+/* 섹션 배경 명확화 */
+.section-menu {
+  width: 100%;
+  background-color: #f2f2f2;
+  padding: 60px 0;
+  border-top: 1px solid #ddd;
+}
+
+.map-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* 지도와 버튼 가로 배치 */
+.map-content-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 30px;
+  gap: 40px;
+}
+
+/* 좌측 버튼 그룹 (1-1-1-2-2) */
+.map-buttons-group {
+  flex: 0 0 380px;
+  width: 380px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* 버튼 사이 간격 조정 */
+}
+
+/* 메인 지역 버튼 (서일본, 동일본 등) */
+.area-btn {
+  display: block;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  text-decoration: none;
+  overflow: hidden; /* 박스 밖으로 튀어나가는 것 방지 */
+  padding: 0;
+}
+
+.area-btn img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.area-btn:hover,
+.sub-btn-top:hover,
+.sub-btn-bottom:hover {
+  background-color: #f9f9f9;
+}
+
+.bottom-item:hover {
+  background: #f9f9f9;
+}
+
+/* 버튼별 포인트 컬러 라인 */
+.red-line:hover,
+.red-line.active {
+  border-left: 5px solid #ff7c7c;
+  background: #fff5f5;
+}
+.blue-line:hover,
+.blue-line.active {
+  border-left: 5px solid #59b1ff;
+  background: #f5faff;
+}
+.yellow-line:hover,
+.yellow-line.active {
+  border-left: 5px solid #ffcc33;
+  background: #fffdf5;
+}
+.hokkaido-line:hover,
+.hokkaido-line.active {
+  border-left: 5px solid #7cd3a1;
+  background: #f5fff9;
+}
+
+/* 하단 2열 그리드 */
+.sub-btns-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 2열 */
+  gap: 15px;
+  margin-top: 5px;
+}
+
+/* 버튼 박스 그룹 스타일 */
+.sub-btn-box {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  overflow: hidden;
+  /* width: 222px;
+  height: 100px; */
+}
+
+.sub-btn {
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+}
+
+.sub-btn-top {
+  display: block;
+  border-bottom: 1px solid #eee;
+  text-decoration: none;
+  padding: 0;
+}
+
+.sub-btn-top img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* 서브 버튼 하단 (해당 점포는 여기) */
+.sub-btn-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 10px; /* 이 부분은 텍스트 이미지라 여백 유지 */
+  text-decoration: none;
+  position: relative;
+  background-color: #fff;
+  height: 45px;
+  box-sizing: border-box;
+}
+
+.sub-btn-bottom img {
+  height: 13px; /* 하단 '해당 점포는 여기' 글씨 크기 고정 */
+  width: auto;
+}
+
+.sub-btn-bottom::after {
+  content: "›";
+  position: absolute;
+  right: 15px;
+  font-size: 20px;
+  color: #999;
+}
+
+.area-btn:hover,
+.sub-btn-top:hover,
+.sub-btn-bottom:hover {
+  background-color: #f9f9f9;
+  opacity: 0.8;
+}
+.sub-btn-box img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* 지도 영역 */
+.map-image-wrap {
+  flex: 1;
+  position: relative;
+  min-height: 650px;
+  overflow: visible;
+  background-color: transparent;
+  border: none;
+}
+
+.path-group {
+  position: absolute;
+  transition: 0.3s;
+}
+
+.path-group path {
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+/* 마우스 올렸을 때 진해지는 효과 */
+.path-group:hover path,
+.path-group.active path {
+  filter: brightness(0.85);
+}

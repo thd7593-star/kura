@@ -1,0 +1,502 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bxslider@4.2.17/dist/jquery.bxslider.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bxslider@4.2.17/dist/jquery.bxslider.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <link rel="stylesheet" href="kura.css" />
+  <link rel="stylesheet" href="button.css" />
+  <link rel="stylesheet" href="kura1slide.css" />
+  <link rel="stylesheet" href="kura2slide2.css" />
+  <link rel="stylesheet" href="kura3slide3.css" />
+  <link rel="stylesheet" href="news.css?v=2">
+  <link rel="stylesheet" href="footer.css">
+  <link rel="stylesheet" href="kura3.css">
+  <link rel="stylesheet" href="style.css">
+  
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1+Code:wght@100..700&family=Noto+Serif+JP:wght@200..900&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=M+PLUS+1+Code:wght@100..700&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic&family=Google+Sans+Flex:opsz,wght@6..144,1..1000&family=Sawarabi+Gothic&display=swap" rel="stylesheet">
+  <style>
+    footer { font-family: "M PLUS 1 Code", monospace; }
+    body, h1, h2, h3, h4, h5, h6, p, a, li, span, button {
+      font-family: "Noto Serif JP", serif;
+      font-optical-sizing: auto;
+      font-style: normal;
+    }
+    .news-title, .news-link { font-weight: 475; }
+    .news-date { font-weight: 600; }
+    .news-more { font-weight: 500; }
+
+    /* 깨짐 방지 추가 CSS */
+    .slider-wrapper img { width: 100%; display: block; height: auto; }
+    .bx-wrapper { margin: 0 auto; border: none; box-shadow: none; background: transparent; }
+  </style>
+</head>
+  <body>
+    <header class="header">
+      <div class="logo-area">
+         <a href="kura.html" aria-label="くら寿司 ホームへ">
+           <img src="logo.png" alt="くら寿司 ロゴ" class="logo" />
+         </a>
+      </div>
+
+      <!-- 메인 메뉴 -->
+      <nav class="nav">
+        <ul class="menu">
+ <li><a href="kura.html">ホーム</a></li>
+          <li><a href="./osusume.html">おすすめ情報</a></li>
+          <li><a href="./店舗検索5.html">店舗検索</a></li>
+          <li><a href="./jy_kura_index_menu.html">メニュー</a></li>
+          <li><a href="./omochikaeri.html">お持ち帰り寿司</a></li>
+        </ul>
+      </nav>
+      
+      <!-- 오른쪽 영역 -->
+       
+      <div class="right-area">
+        <div class="language-selector">
+          <button class="language-btn" type="button" aria-expanded="false">Language</button>
+          <ul class="language-list">
+     <li><a href="https://www.kurasushi.co.jp/en/">English</a></li>
+            <li><a href="https://www.kurasushi.co.jp/zh/">中文（簡体）</a></li>
+            <li><a href="https://www.kurasushi.co.jp/zhb/">中文（繁体）</a></li>
+            <li><a href="https://www.kurasushi.co.jp/ko/">韓国</a></li>
+
+          </ul>
+        </div>
+      </div>
+    </header>
+
+   <!-- 1. jQuery 먼저 -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <!-- 2. bxSlider CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+  
+  <!-- 3. bxSlider JS -->
+  <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+</head>
+<body>
+  <!-- 1슬라이드  -->
+<div class="slider">
+    <div class="slider-view">
+        <div class="slider-track">
+            <div class="slide"><img src="https://www.kurasushi.co.jp/upload/260202fairA_TOP.jpg" /></div>
+            <div class="slide"><img src="https://www.kurasushi.co.jp/upload/260202fairB_TOP.jpg" /></div>
+            <div class="slide"><img src="https://www.kurasushi.co.jp/upload/f90547950f61faa1993a499f473f2d5bb382e546.jpg" /></div>
+            <div class="slide"><img src="https://www.kurasushi.co.jp/upload/260220mofusand_TOP.jpg" /></div>
+            <div class="slide"><img src="https://www.kurasushi.co.jp/upload/45f676ee258e218c6f315b091f7eb6474e3c6c80.jpg" /></div>
+            <div class="slide"><img src="https://www.kurasushi.co.jp/upload/260220hinamaturi_TOP.jpg" /></div>
+            <div class="slide"><img src="https://www.kurasushi.co.jp/upload/5e9edeba614da384fc0a21759fbc9d1dbad82025.jpg" /></div>
+            <div class="slide"><img src="https://www.kurasushi.co.jp/upload/260131_goukaku_TOP.jpg" /></div>
+            <div class="slide"><img src="https://www.kurasushi.co.jp/upload/82fcd131f09b29b744689b47ac9bcf9f59ad25eb.jpg" /></div>
+            <div class="slide"><img src="https://www.kurasushi.co.jp/upload/5fa5a60e4f19c7c86c54f668a473d33a88a6f1ed.jpg" /></div>
+            <div class="slide"><img src="https://www.kurasushi.co.jp/upload/e742b20cf6dd1da9afda690dae277403f33f16b4.jpg" /></div>
+            <div class="slide"><img src="https://www.kurasushi.co.jp/upload/251031kura_brand_TOP.jpg" /></div>
+            <div class="slide"><img src="https://www.kurasushi.co.jp/upload/a00e6088c7b9b196260edd15a5991501485d1940.jpg" /></div>
+        </div>
+    </div>
+
+ 
+    
+    <div class="slider-dots"></div>
+</div>
+
+  
+  </ul>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  
+
+<div class="action-buttons">
+  <a href="./店舗検索5.html" class="btn">
+    <img src="1.png" alt="店舗検索・テーブル予約">
+  </a>
+  <a href="./omochikaeri.html" class="btn">
+    <img src="2.png" alt="お持ち帰り寿司">
+  </a>
+  <a href="https://www.kurasushi.co.jp/epark/" class="btn">
+    <img src="3.png" alt="スマホで注文">
+  </a>
+  <a href="./jy_kura_index_menu.html" class="btn">
+    <img src="4.png" alt="メニュー紹介">
+  </a>
+  </div>
+<a href="./jy_kura_index_menu.html" class="menu-link">
+  <div class="menu-conveyor-wrapper">
+    <div class="lane lane1"></div>
+    <div class="lane lane2"></div>
+    <div class="circle-text">
+      メニューの<br>ご紹介
+    </div>
+  </div>
+</a>
+  </a>
+</div>
+<!-- 2슬라이드  -->
+  <div class="top-topic section">
+      <div class="slider-container">
+        <div class="bxslider-topic">
+          <div>
+            <a href="https://www.kurasushi.co.jp/kin_no_shari/">
+              <img
+                src="https://www.kurasushi.co.jp/upload/a1483622cbbfbd629b9844fbd4d7728a33eaadd8.jpg"
+                alt=""
+              />
+            </a>
+          </div>
+          <div>
+            <a href="./two-slide-img.html">
+              <img
+                src="https://www.kurasushi.co.jp/upload/251031dashiudon_TOP.jpg"
+                alt=""
+              />
+            </a>
+          </div>
+          <div>
+            <a href="https://www.kurasushi.co.jp/topic/007046.html">
+              <img
+                src="https://www.kurasushi.co.jp/upload/251212uoshima_TOP.jpg"
+                alt=""
+              />
+            </a>
+          </div>
+          <div>
+            <a href="https://www.kurasushi.co.jp/topic/000425.html">
+              <img
+                src="https://www.kurasushi.co.jp/upload/260206royal_TOP.jpg"
+                alt=""
+              />
+            </a>
+          </div>
+          <div>
+            <a href="https://www.kurasushi.co.jp/anshin/">
+              <img
+                src="https://www.kurasushi.co.jp/upload/240207cleantable_TOP.jpg"
+                alt=""
+              />
+            </a>
+          </div>
+          <div>
+            <a href="https://www.kurasushi.co.jp/topic/006765.html">
+              <img
+                src="https://www.kurasushi.co.jp/upload/ac75944139e91c5688d8d5c2e1a68f66357efefb.jpg"
+                alt=""
+              />
+            </a>
+          </div>
+          <div>
+            <a href="https://www.kurasushi.co.jp/topic/005822.html">
+              <img
+                src="https://www.kurasushi.co.jp/upload/30cb8cd0b0d018e78814acc2cf03dc1dfa04455e.jpg"
+                alt=""
+              />
+            </a>
+          </div>
+          <div>
+            <a href="https://www.kurasushi.co.jp/topic/005011.html">
+              <img
+                src="https://www.kurasushi.co.jp/upload/230925bikkurapon_plus_TOP.jpg"
+                alt=""
+              />
+            </a>
+          </div>
+          <div>
+            <a href="https://www.kurasushi.co.jp/line_reservation/">
+              <img
+                src="https://www.kurasushi.co.jp/upload/e665a3f74cea3bbc27331e50690e9a913d80ff23.jpg"
+                alt=""
+              />
+            </a>
+          </div>
+          <div>
+            <a
+              href="https://wester.jr-odekake.net/campaign/detail/012027012801"
+            >
+              <img
+                src="https://www.kurasushi.co.jp/upload/260202wesmo.jpg"
+                alt=""
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- 엑스포 가즈아 -->
+          <div class="expo-banner">
+        <a href="https://www.kurasushi.co.jp/2025expo/" target="_blank">
+          <img
+            src="https://www.kurasushi.co.jp/upload/251014expo_TOP.jpg"
+            alt="大阪・関西万博"
+          />
+        </a>
+      </div>
+    </div>
+
+
+<!--뉴스란 -->
+<section class="news-section">
+  <div class="news-container">
+    <h2 class="news-title">ニュース</h2>
+
+    <ul class="news-list" id="newsList">
+      <!-- JS로 삽입됨 -->
+    </ul>
+
+   <div class="news-more-wrapper">
+  <button class="news-more" id="loadMoreBtn">一覧を見る</button>
+</div>
+  </div>
+
+  <!-- 쿠라스시3슬라이드 css에 같이 포함시킴 귀찮아서  -->
+</section> 
+<div class="sns-box1">
+  <h2 class="sns-title1">くら寿司 SNS</h2>
+
+  <div class="sns-icons1">
+    <a href="https://www.youtube.com/channel/UC9DcLCVMjjiuyuc4_deD0Pw" target="_blank">
+      <img src="https://www.kurasushi.co.jp/common/images/icon_sns_yt.svg" alt="YouTube">
+    </a>
+    <a href="https://x.com/mutenkurasushi" target="_blank">
+      <img src="https://www.kurasushi.co.jp/common/images/icon_sns_x.svg" alt="X">
+    </a>
+    <a href="https://www.facebook.com/Kurasushi" target="_blank">
+      <img src="https://www.kurasushi.co.jp/common/images/icon_sns_fb.svg" alt="Facebook">
+    </a>
+    <a href="https://www.instagram.com/kurasushi.fan/" target="_blank">
+      <img src="https://www.kurasushi.co.jp/common/images/icon_sns_in.png" alt="Instagram">
+    </a>
+  </div>
+
+  <div class="sns-text-area">
+    <p class="sns-label1">くら寿司公式SNSで最新情報を配信中</p>
+    <a href="https://www.kurasushi.co.jp/policy/socialmedia.html" class="sns-policy">
+      <span></span> ソーシャルメディアポリシー
+    </a>
+  </div>
+</div>
+<!-- 마지막슬라이드 -->
+  <div class="container">
+      <div class="slider-wrapper">
+        <div class="bxslider-cards">
+          <div class="slide">
+            <a href="https://www.kurasushi.co.jp/fan/pr.php">
+              <img
+                src="https://www.kurasushi.co.jp/images/bnr_contents_pr.png"
+              />
+              <div class="text-box">
+                <h3>広報ギャラリー</h3>
+              </div>
+            </a>
+          </div>
+
+
+          <div class="slide">
+            <a href="./letsgo.html">
+              <img
+                src="https://www.kurasushi.co.jp/images/bnr_contents_howto.png"
+              />
+              <div class="text-box">
+                 <h3>楽しみ方ガイド</h3>
+              </div>
+            </a>
+          </div>
+
+
+          <div class="slide">
+            <a href="https://www.kurasushi.co.jp/author/index.html">
+              <img
+                src="https://www.kurasushi.co.jp/images/bnr_contents_author.jpg"
+              />
+              <div class="text-box">
+              <h3>くら寿司プレスリリース</h3>
+              </div>
+            </a>
+          </div>
+
+
+          <div class="slide">
+            <a href="https://www.kurasushi.co.jp/quality/index.html">
+              <img
+                src="https://www.kurasushi.co.jp/images/bnr_contents_quality.jpg"
+              />
+              <div class="text-box">
+                <h3>くら寿司のこだわり</h3>
+              </div>
+            </a>
+          </div>
+
+
+          <div class="slide">
+            <a href="https://www.kurasushi.co.jp/global_flagship/">
+              <img
+                src="https://www.kurasushi.co.jp/images/bnr_contents_flagship.png"
+              />
+              <div class="text-box">
+               <h3>グローバル旗艦店</h3>
+              </div>
+            </a>
+          </div>
+
+
+          <div class="slide">
+            <a href="https://www.kurasushi.co.jp/mirai/">
+              <img
+                src="https://www.kurasushi.co.jp/images/bnr_contents_miraiproject.jpg"
+              />
+              <div class="text-box">
+             <h3>くら寿司の取り組み</h3>
+              </div>
+            </a>
+          </div>
+
+
+          <div class="slide">
+            <a href="https://www.kurasushi.co.jp/smart_kura/">
+              <img
+                src="https://www.kurasushi.co.jp/images/bnr_contents_smart.jpg"
+              />
+              <div class="text-box">
+             <h3>スマートくらプロジェクト</h3>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 외부 클릭 칸들  -->
+<div class="sns-container">
+  <div class="sns-grid-top">
+    <a href="https://www.kurasushi.co.jp/mutenkura/" class="sns-item">
+      <img src="https://www.kurasushi.co.jp/images/btn_link_mutenkura.png?20250522" alt="무첨가">
+    </a>
+    <a href="https://www.kurasushi.co.jp/kura_osakana/" class="sns-item">
+      <img src="https://www.kurasushi.co.jp/images/btn_link_osakanaichiba.png" alt="오사카나시장">
+    </a>
+    <a href="https://www.610kura.com/" class="sns-item">
+      <img src="https://www.kurasushi.co.jp/images/btn_link_netstore.png" alt="인터넷통판">
+    </a>
+    <a href="https://www.kurasushi.co.jp/mirai/fish_farm.html" class="sns-item">
+      <img src="https://www.kurasushi.co.jp/images/btn_link_fishfarm.png" alt="쿠라팜">
+    </a>
+  </div>
+
+  <div class="sns-grid-bottom">
+    <a href="https://kurasushi.com/" class="sns-item wide-box">
+     <img src="https://www.kurasushi.co.jp/images/btn_link_america.png" alt="2">
+    </a>
+    <a href="https://www.kurasushi.tw/" class="sns-item wide-box">
+      <img src="https://www.kurasushi.co.jp/images/btn_link_asia.png" alt="3">
+    </a>
+  </div>
+</div>
+<!-- 푸터 -->
+<footer class="kura-footer">
+    <div class="footer-inner">
+        <nav class="footer-nav">
+            <div class="nav-col">
+                <h3>公式サイト</h3>
+                <ul>
+                    <li><a href="#">おすすめ情報</a></li>
+                    <li><a href="#">店舗検索</a></li>
+                    <li><a href="#">メニュー</a></li>
+                    <li><a href="#">お持ち帰り寿司</a></li>
+                    <li class="mt-20"><a href="#">くら寿司プレスリリース</a></li>
+                </ul>
+            </div>
+
+              <body>
+  
+            <div class="nav-col">
+                <h3>企業サイト</h3>
+                <ul>
+                    <li><a href="https://www.kurasushi.co.jp/company/?_ga=2.47471271.1034545711.1771650560-1362875877.1771650560&_gl=1*1xc2jz8*_ga*MTM2Mjg3NTg3Ny4xNzcxNjUwNTYw*_ga_4ETWR1HF6K*czE3NzE5MTI3MTgkbzgkZzEkdDE3NzE5MTI3MjckajUxJGwwJGgw">会社案内</a></li>
+                    <li><a href="https://www.kurasushi.co.jp/company/ir/?_ga=2.47471271.1034545711.1771650560-1362875877.1771650560&_gl=1*bhqs92*_ga*MTM2Mjg3NTg3Ny4xNzcxNjUwNTYw*_ga_4ETWR1HF6K*czE3NzE5MTI3MTgkbzgkZzEkdDE3NzE5MTI4NDYkajYwJGwwJGgw">IR情報</a></li>
+                    <li><a href="https://www.kurasushi.co.jp/company/csr/?_ga=2.15051830.1034545711.1771650560-1362875877.1771650560&_gl=1*m11kzq*_ga*MTM2Mjg3NTg3Ny4xNzcxNjUwNTYw*_ga_4ETWR1HF6K*czE3NzE5MTI3MTgkbzgkZzEkdDE3NzE5MTI4NTgkajQ4JGwwJGgw">CSR活動</a></li>
+                    <li><a href="https://www.kurasushi.co.jp/company/recruit/?_ga=2.15051830.1034545711.1771650560-1362875877.1771650560&_gl=1*1672yz6*_ga*MTM2Mjg3NTg3Ny4xNzcxNjUwNTYw*_ga_4ETWR1HF6K*czE3NzE5MTI3MTgkbzgkZzEkdDE3NzE5MTI4ODMkajIzJGwwJGgw">採用情報</a></li>
+                    <li><a href="https://kura-job.net/jobfind-pc/">アルバイト・パート募集</a></li>
+                </ul>
+            </div>
+            <div class="nav-col">
+                <h3>Globalサイト</h3>
+                <ul>
+                    <li><a href="https://kurasushi.com/">KURA Sushi USA, Inc.</a></li>
+                    <li><a href="https://www.kurasushi.tw/">亞洲藏壽司股份有限公司</a></li>
+                </ul>
+            </div>
+            <div class="nav-col no-title">
+                <ul>
+                    <li><a href="https://www.kurasushi.co.jp/company/btob/storeland.php?_ga=2.35045025.1034545711.1771650560-1362875877.1771650560&_gl=1*vhpw6n*_ga*MTM2Mjg3NTg3Ny4xNzcxNjUwNTYw*_ga_4ETWR1HF6K*czE3NzE5MTI3MTgkbzgkZzEkdDE3NzE5MTI5NzIkajUkbDAkaDA.">店舗用地募集</a></li>
+                    <li><a href="https://www.kurasushi.co.jp/company/btob/local.php?_ga=2.35045025.1034545711.1771650560-1362875877.1771650560&_gl=1*9i015t*_ga*MTM2Mjg3NTg3Ny4xNzcxNjUwNTYw*_ga_4ETWR1HF6K*czE3NzE5MTI3MTgkbzgkZzEkdDE3NzE5MTI5OTIkajYwJGwwJGgw">ご当地食材募集</a></li>
+                    <li class="mt-20"><a href="https://www.kurasushi.co.jp/contact/?_ga=2.35045025.1034545711.1771650560-1362875877.1771650560&_gl=1*1g5t1a5*_ga*MTM2Mjg3NTg3Ny4xNzcxNjUwNTYw*_ga_4ETWR1HF6K*czE3NzE5MTI3MTgkbzgkZzEkdDE3NzE5MTMwMTQkajM4JGwwJGgw">お問い合わせ</a></li>
+                    <li><a href="https://www.kurasushi.co.jp/policy/?_ga=2.43488165.1034545711.1771650560-1362875877.1771650560&_gl=1*t43wyb*_ga*MTM2Mjg3NTg3Ny4xNzcxNjUwNTYw*_ga_4ETWR1HF6K*czE3NzE5MTI3MTgkbzgkZzEkdDE3NzE5MTMwNTYkajYwJGwwJGgw">プライバシーポリシー</a></li>
+                    <li><a href="https://www.kurasushi.co.jp/policy/socialmedia.html?_ga=2.206413587.1034545711.1771650560-1362875877.1771650560&_gl=1*1poi98o*_ga*MTM2Mjg3NTg3Ny4xNzcxNjUwNTYw*_ga_4ETWR1HF6K*czE3NzE5MTI3MTgkbzgkZzEkdDE3NzE5MTMwNTYkajYwJGwwJGgw">ソーシャルメディアポリシー</a></li>
+                   
+                </ul>
+            </div>
+        </nav>
+
+        <div class="allergy-btn-wrap">
+            <a href="https://www.kurasushi.co.jp/app/app_allergen.html" class="allergy-btn">アレルギー・原材料・原産地情報</a>
+        </div>
+
+        <div class="sns-box">
+            <div class="sns-top">
+                <span class="sns-label">くら寿司公式SNSで最新情報を配信中</span>
+                <div class="sns-icons">
+                    <a href="https://www.youtube.com/channel/UC9DcLCVMjjiuyuc4_deD0Pw"><img src="https://www.kurasushi.co.jp/common/images/icon_sns_yt.svg" alt="YouTube"></a>
+                    <a href="https://x.com/mutenkurasushi"><img src="https://www.kurasushi.co.jp/common/images/icon_sns_x.svg" alt="트위터"></a>
+                    <a href="https://www.facebook.com/Kurasushi"><img src="https://www.kurasushi.co.jp/common/images/icon_sns_fb.svg" alt="Facebook"></a>
+                         <a href="https://www.instagram.com/kurasushi.fan/"><img src="https://www.kurasushi.co.jp/common/images/icon_sns_in.png" alt="Facebook"></a>
+            
+                  </div>
+            </div>
+            <div class="sns-bottom">
+                <a href="https://www.kurasushi.co.jp/policy/socialmedia.html" class="sns-policy">ソーシャルメディアポリシー</a>
+            </div>
+        </div>
+<div class="footer-bottom">
+    <div class="bottom-logo">
+        <a href="kura.html">
+            <img src="logo.png" alt="くら寿司 ロゴ" class="bottom-logo" />
+        </a>
+    </div>
+    <p class="copyright">Copyright Kura Sushi, Inc. All Rights Reserved.</p>
+</div>
+                
+           
+    </div>
+
+    <div class="footer-pattern">
+        <a href="#" class="btn-top"></a>
+    </div>
+</footer>
+
+
+</html>
+    <script src="kura.js"></script>
+  </body>
+</html>
+
+

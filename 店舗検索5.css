@@ -1,0 +1,593 @@
+/* ===== 기본 리셋 ===== */
+
+* {
+  margin: 0;
+
+  padding: 0;
+
+  box-sizing: border-box;
+}
+
+/* ===== 상단 타이틀 ===== */
+
+.page-header {
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  margin-top: 80px;
+
+  font-size: 25px;
+
+  font-family: "Noto Serif JP", "serif";
+}
+
+/* ===== 왼쪽 エリアから探す, キーワードで探す, 条件で絞り込んで探す,提供サービス 부분===== */
+.areafind h2 {
+  font-size: 14px;
+  font-family: "M PLUS 1 Code", monospace;
+}
+
+/* ===== 전체 컨테이너 ===== */
+
+.container {
+  width: 90%;
+
+  max-width: 1200px;
+
+  margin: 0 auto;
+}
+
+/* ===== 에리어 검색 ===== */
+
+.areafind {
+  display: flex;
+
+  flex-direction: column;
+}
+
+/* 현재 위치 버튼 */
+
+.where {
+  width: 162px;
+
+  height: 40px;
+
+  background-color: #ffffff;
+
+  color: #bc0d19;
+
+  border: 2px solid #bc0d19;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  font-family: "M PLUS 1 Code", monospace;
+  display: flex; /* 🔥 추가 */
+  align-items: center; /* 세로 가운데 */
+  justify-content: center; /* 가로 가운데 */
+  gap: 6px; /* 아이콘과 글자 간격 */
+}
+/* 화살표 설정 */
+.nav-icon {
+  width: 16px;
+  height: 16px;
+  fill: #bc0d19;
+}
+
+.where:hover .nav-icon {
+  fill: white;
+}
+
+.where:hover {
+  background-color: #bc0d19;
+
+  color: white;
+}
+
+/* ===== 공통 지역 버튼 스타일 ===== */
+
+.area-btn {
+  width: 170px; /* grid 한 칸 꽉 채움 하려면 width 100%로 바꾸면댐 축소 했을때도 한칸에 들어감*/
+
+  height: 40px;
+
+  background-color: #5a5a5a;
+
+  color: white;
+
+  cursor: pointer;
+
+  text-align: center;
+
+  border: none;
+
+  font-weight: 700;
+  font-family: "M PLUS 1 Code", monospace;
+}
+
+.area-btn:hover {
+  background-color: black;
+}
+
+.area-btn.active {
+  background-color: black;
+}
+
+/* ===== 상단 지역 버튼 그룹 (6개 한 줄) ===== */
+
+.btngroup {
+  display: grid;
+
+  grid-template-columns: repeat(6, 1fr);
+
+  gap: 16px;
+  position: relative;
+}
+
+/* ===== 서브 버튼 컬러설정 ======*/
+.sub-area-all .area-btn {
+  background-color: #eeeeee;
+  color: black;
+  font-weight: 700;
+  width: 170px;
+  height: 32px;
+}
+
+.sub-area-all .area-btn:hover {
+  background-color: gray;
+  font-weight: 700;
+}
+/* ===== 서브 지역 영역 (기본 닫힘) ===== */
+
+.sub-area-all {
+  top: 350px;
+  left: 54px;
+  z-index: 2;
+  width: 1200px;
+}
+
+.sub-area,
+.sub-area2,
+.sub-area3,
+.sub-area4,
+.sub-area5,
+.sub-area6,
+.sub-area7,
+.sub-area8,
+.sub-area9 {
+  border-top: 0 solid transparent;
+  padding-top: 0;
+
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 16px;
+
+  overflow: hidden;
+  max-height: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+
+  opacity: 0;
+  transform: translateY(-8px);
+
+  transition:
+    max-height 0.35s ease,
+    padding 0.35s ease,
+    opacity 0.25s ease,
+    transform 0.25s ease;
+}
+
+.sub-area.active,
+.sub-area2.active,
+.sub-area3.active,
+.sub-area4.active,
+.sub-area5.active,
+.sub-area6.active,
+.sub-area7.active,
+.sub-area8.active,
+.sub-area9.active {
+  margin-top: 15px;
+  border-top: 1px solid #ddd; /* 🔥 희미한 줄 */
+  padding-top: 20px; /* 줄과 버튼 사이 간격 */
+
+  max-height: 800px; /* 넉넉하게 */
+  padding-top: 16px;
+  padding-bottom: 8px;
+
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== 키워드 검색 ===== */
+
+input {
+  width: 100%;
+
+  height: 40px;
+}
+
+/* ===== 체크박스 영역 ===== */
+
+.checkbox {
+  display: block;
+}
+
+.service {
+  color: gray;
+}
+
+/* 체크박스 그리드 */
+
+.cbgroup {
+  width: 100%;
+
+  max-width: 900px;
+
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 12px 20px;
+
+  margin: 0 auto;
+}
+
+.cbgroup label {
+  display: grid;
+
+  grid-template-columns: 20px auto;
+
+  align-items: center;
+
+  cursor: pointer;
+}
+
+.cbgroup input[type="checkbox"] {
+  margin: 0;
+
+  /* ✅ 기본 체크박스 모양 제거 */
+  appearance: none;
+  -webkit-appearance: none;
+
+  width: 20px;
+  height: 20px;
+  border-radius: 50%; /* 🔥 동그라미 */
+  border: 2px solid #ccc;
+  background: grey;
+
+  cursor: pointer;
+  position: relative;
+
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+/* ✅ 체크표시는 항상 보이게 */
+.cbgroup input[type="checkbox"]::after {
+  content: "✓";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -55%);
+  font-size: 13px;
+  color: white; /* 기본은 회색 체크 */
+  line-height: 1;
+}
+
+/* ✅ 클릭(checked)하면 동그라미 색만 바뀜 */
+.cbgroup input[type="checkbox"]:checked {
+  background-color: black; /* 원하는 색으로 변경 가능 */
+  border-color: black;
+}
+
+/* ✅ 클릭했을 때 체크표시 색도 보기 좋게 */
+.cbgroup input[type="checkbox"]:checked::after {
+  color: #fff;
+}
+
+/* ===== 하단 버튼 ===== */
+
+.last-paper {
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  margin-top: 100px;
+
+  gap: 20px;
+}
+
+.reset-btn {
+  width: 105px;
+  height: 40px;
+  background-color: #eeeeee;
+
+  color: black;
+  cursor: pointer;
+  border: solid #eee;
+  font-weight: 700;
+  font-family: "M PLUS 1 Code", monospace;
+}
+
+.keyword {
+  margin-top: 50px;
+  border-top: 1px solid #ddd; /* 🔥 희미한 줄 */
+  padding-top: 30px; /* 줄과 내용 간격 */
+  transition: margin-top 0.35s ease; /* ✅ 추가: 부드럽게 따라오기 */
+}
+
+/* ✅ sub-area가 열려있을 때 간격 줄이기 */
+.keyword.compact {
+  margin-top: 0; /* 원하는 만큼 조절 (예: 10~30px) */
+}
+
+.reset-btn:hover {
+  background-color: darkgray;
+}
+
+.keyword-search {
+  width: 262px;
+  height: 40px;
+  background-color: #bc0d19;
+  border: 1px solid #bc0d19;
+  cursor: pointer;
+  color: white;
+  font-weight: 700;
+  font-family: "M PLUS 1 Code", monospace;
+}
+
+.keyword-search:hover {
+  background-color: darkred;
+}
+
+/* ===== 화살표 스타일 ===== */
+
+.area-btn {
+  position: relative; /* 화살표 위치 기준 */
+  text-align: center; /* 글자 중앙 */
+  padding: 0 30px; /* 오른쪽 공간 확보 */
+}
+
+.arrow {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: transform 0.3s ease;
+}
+
+/* 버튼 active일 때 화살표 회전 */
+.area-btn.active .arrow {
+  transform: translateY(-50%) rotate(180deg);
+}
+
+button {
+  border-radius: 8px;
+}
+
+/* 폰트 설정 */
+body {
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+.cbgroup label {
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+.last-paper {
+  position: relative;
+  padding-bottom: 30px; /* 선과 버튼 사이 여백 */
+}
+
+.last-paper::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #ddd; /* 희미한 회색 */
+}
+
+.last-paper {
+  position: relative;
+  padding-bottom: 30px; /* 선과 버튼 사이 여백 */
+}
+
+.last-paper::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #ddd; /* 희미한 회색 */
+}
+
+.store-open-news {
+  max-width: 980px;
+  margin: 28px auto 0;
+  border-top: 1px solid #cfcfcf;
+  padding-top: 16px;
+}
+
+.store-open-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.store-open-list li + li {
+  margin-top: 18px;
+}
+
+.store-open-link {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  text-decoration: none;
+  color: #111;
+  line-height: 1.5;
+}
+
+.store-open-date {
+  flex: 0 0 128px;
+  color: #6c7884;
+  font-size: 30px;
+  letter-spacing: 0.01em;
+}
+
+.store-open-text {
+  position: relative;
+  padding-right: 26px;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.store-open-text::after {
+  content: "��";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #c8102e;
+  font-size: 11px;
+}
+
+.store-open-link:hover .store-open-text {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .store-open-link {
+    display: grid;
+    gap: 6px;
+  }
+
+  .store-open-date {
+    flex: none;
+    font-size: 14px;
+  }
+
+  .store-open-text {
+    font-size: 15px;
+    padding-right: 18px;
+  }
+}
+
+/* store-open-news override (match reference) */
+.store-open-news {
+  max-width: 980px;
+  margin: 22px auto 0;
+  border-top: 1px solid #cfcfcf;
+  padding-top: 14px;
+}
+
+.store-open-list li + li {
+  margin-top: 16px;
+  font-family: "M PLUS 1 Code", monospace;
+}
+
+.store-open-link {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  align-items: center;
+  column-gap: 14px;
+  line-height: 1.45;
+  color: #111;
+  text-decoration: none;
+  font-family: "M PLUS 1 Code", monospace;
+}
+
+.store-open-date {
+  color: #6c7884;
+  font-size: 14px;
+  letter-spacing: 0;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+.store-open-text {
+  position: relative;
+  padding-right: 20px;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: "M PLUS 1 Code", monospace;
+}
+
+.store-open-text::after {
+  content: "";
+  position: absolute;
+  right: 2px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  border-left: 5px solid #c8102e;
+}
+
+.store-open-link:hover .store-open-text {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+@media (max-width: 768px) {
+  .store-open-link {
+    grid-template-columns: 1fr;
+    row-gap: 4px;
+  }
+
+  .store-open-date {
+    font-size: 13px;
+  }
+
+  .store-open-text {
+    font-size: 13px;
+    padding-right: 16px;
+  }
+}
+
+/* store-open-news left align override */
+.store-open-news {
+  max-width: none;
+  width: 100%;
+  margin: 22px 0 0;
+}
+
+.store-open-link {
+  grid-template-columns: 108px 1fr;
+  column-gap: 12px;
+}
+
+/* store-open-news spacing and arrow final adjust */
+.store-open-news {
+  border-top: 0 !important;
+  padding-top: 8px;
+  margin-bottom: 56px;
+}
+
+.store-open-text {
+  display: inline-block;
+  padding-right: 0;
+}
+
+.store-open-text::after {
+  position: static;
+  transform: none;
+  display: inline-block;
+  margin-left: 8px;
+  vertical-align: middle;
+  width: 0;
+  height: 0;
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  border-left: 5px solid #c8102e;
+}

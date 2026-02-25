@@ -1,0 +1,65 @@
+/* 부모 컨테이너 설정 */
+.top-topic.section {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 60px;
+}
+
+/* bxSlider 외부 감싸는 영역 초기화 (테두리/그림자 제거 핵심) */
+.bx-wrapper {
+  margin: 0 !important;
+  border: 0 !important;
+  padding: 0 !important; /* 혹시 모를 내부 여백 제거 */
+  background: none !important;
+  box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+}
+
+/* 슬라이더 컨테이너 */
+.slider-container {
+  flex: 1;
+  max-width: 600px;
+  min-width: 0;
+}
+
+/* 엑스포 배너 설정 */
+.expo-banner {
+  flex: 1;
+  max-width: 600px;
+}
+
+/* 슬라이더 내부 이미지 - 완전한 네모(직사각형) */
+.bxslider-topic img,
+.bxslider-cards img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: none !important;
+  outline: none !important;
+  /* 둥근 모서리 삭제 */
+  border-radius: 0 !important;
+}
+
+/* 오른쪽 엑스포 배너 이미지 - 완전한 네모(직사각형) */
+.expo-banner img {
+  width: 100%;
+  height: auto;
+  display: block;
+  /* 둥근 모서리 삭제 */
+  border-radius: 0 !important;
+}
+
+.menu-conveyor-wrapper {
+  height: 320px;    /* 레인 이미지가 잘리지 않는 선에서 최소화 */
+  margin-bottom: 0;
+}
+
+.top-topic.section {
+  padding-top: 20px; /* 위쪽 여백을 20px로 확 줄임 */
+}

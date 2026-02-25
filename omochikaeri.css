@@ -1,0 +1,440 @@
+/*메인***************************************************************************************************** */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #fcfcfc;
+  position: relative;
+  justify-content: center;
+  /* 흰색과 아주 연한 회색을 교차시켜 격자 생성 */
+  background-color: #ffffff;
+  background-image:
+    linear-gradient(45deg, #f5f5f5 25%, transparent 25%),
+    linear-gradient(-45deg, #f5f5f5 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, #f5f5f5 75%),
+    linear-gradient(-45deg, transparent 75%, #f5f5f5 75%);
+  background-size: 300px 300px; /* 격자 무늬의 크기 */
+  background-position:
+    0 0,
+    0 150px,
+    150px -150px,
+    -150px 0px;
+}
+main {
+  display: block;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.main1-bg {
+  background-color: white;
+}
+#top-img {
+  display: flex;
+  width: 100%;
+}
+
+/* 제목 */
+#top-text2 {
+  position: relative;
+  left: 460px;
+  bottom: 150px;
+  width: 230px;
+}
+
+.main1 {
+  display: block;
+  margin: 0 auto;
+  width: 55%;
+  margin-top: -35px;
+  margin-bottom: 30px;
+}
+
+#takeout {
+  display: flex;
+  width: 200px;
+  margin: 0 auto;
+  margin-top: 40px;
+}
+.text1 {
+  display: flex;
+  font-size: 20pt;
+  font-weight: bold;
+  justify-content: center;
+  margin-top: 45px;
+}
+
+.text2 {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+#img-1 {
+  display: flex;
+  width: 90%;
+}
+
+.box-a {
+  display: flex;
+  justify-content: center;
+}
+
+.big-qrbox {
+  position: relative;
+  width: 60%;
+}
+.big-qrbox button {
+  cursor: pointer;
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+.big-qrbox button:hover,
+.price-btn:hover {
+  background-color: #f8f8f8; /* 배경색을 살짝 어둡게 */
+  border-color: rgba(0, 0, 0, 0.4); /* 테두리를 조금 더 진하게 */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* 미세한 그림자로 입체감 부여 */
+  transform: translateY(-1px); /* 버튼이 아주 살짝 위로 뜨는 효과 */
+}
+.btn-arrow {
+  position: absolute;
+  right: 5px;
+}
+.qr-bigbox {
+  border: 1px solid black;
+  background-color: white;
+}
+.qr-box {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.big-qrbox button {
+  font-size: 15pt;
+  width: 100%;
+  height: 50px;
+  margin-bottom: 20px;
+}
+
+.qr-explain {
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15pt;
+  height: 50px;
+  font-weight: bolder;
+}
+.qr-bigbox {
+  display: block;
+  justify-content: center;
+  align-items: center;
+}
+
+.qr {
+  border: 1px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.qr img {
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  width: 200px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.qr button {
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.btn {
+  position: relative;
+}
+.arrow2 {
+  position: absolute;
+  right: 8px;
+  font-weight: bolder;
+}
+.box-b {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+.box-b div {
+  margin-bottom: 5px;
+}
+
+.b2,
+.b1 {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  gap: 30px;
+}
+.b1 div,
+.b2 div {
+  display: flex;
+  position: relative;
+  flex-direction: column; /* 이미지 아래에 텍스트 배치 */
+  align-items: center; /* 가로 중앙 정렬 */
+  width: 350px; /* 박스 너비 고정 */
+}
+.b1 img,
+.b2 img {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  width: 100%;
+}
+
+.b-text1,
+.b-text2,
+.b-text3,
+.b-text4 {
+  display: flex;
+  position: relative;
+  bottom: 40px;
+}
+
+/* 2. 마우스 오버(Hover) 상태 설정 */
+.b1 > div:hover,
+.b2 > div:hover {
+  /* 테두리 두께는 유지하고 색상만 변경하여 크기 변화를 차단합니다 */
+  border-color: rgba(0, 0, 0, 0.2);
+  background-color: #f9f9f9;
+}
+
+/* 3. 마우스 오버 시 내부 이미지와 글자 처리 */
+.b1 div:hover img,
+.b1 div:hover .b-text1,
+.b1 div:hover .b-text2,
+.b2 div:hover img,
+.b2 div:hover .b-text3,
+.b2 div:hover .b-text4 {
+  opacity: 0.5; /* 이미지와 글자는 연하게 (0.0 ~ 1.0 조절 가능) */
+  transition: opacity 0.3s ease;
+}
+
+.main2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  width: 64%;
+  height: 200px;
+  margin: 0 auto;
+  padding: 40px;
+  margin-bottom: 50px;
+  /* x축, y축, 번짐 정도, 퍼짐 정도, 색상 순서 */
+  /* 0 4px 15px rgba(0, 0, 0, 0.05): 아래쪽으로 부드럽게 퍼지는 연한 그림자 */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08);
+
+  /* 테두리가 너무 날카롭다면 약간의 곡률을 주는 것도 좋습니다 */
+  border-radius: 8px;
+
+  /* 박스가 겹칠 경우를 대비해 위치 속성 추가 */
+  position: relative;
+  z-index: 1;
+}
+
+/* 내부 div들의 너비 설정을 하나로 통일 */
+.main2 > div,
+.line,
+.button-group {
+  width: 100% !important; /* 부모 패딩 안에서 꽉 차게 설정 */
+  margin: 0;
+}
+
+.line {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.c-text {
+  display: flex;
+  position: relative;
+  justify-content: center;
+
+  font-size: 25pt;
+  font-weight: bolder;
+}
+
+.button-group {
+  display: flex;
+  width: 100%;
+  gap: 10px; /* 버튼 사이 간격 */
+  justify-content: center;
+}
+.price-btn {
+  flex: 1; /* 모든 버튼이 균일한 너비를 가짐 */
+  display: flex;
+  justify-content: space-between; /* 텍스트는 왼쪽, 화살표는 오른쪽 */
+  align-items: center;
+  padding: 12px 15px;
+  background-color: white;
+  border: 1px solid #999;
+  font-size: 10pt;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.arrow {
+  font-style: normal;
+  font-weight: bold;
+}
+
+.main3,
+.c-text2 {
+  padding: 20px;
+  background-color: white;
+  display: flex;
+  margin: 0px auto;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 64%;
+  font-size: 25pt;
+}
+.main3 {
+  /* x축, y축, 번짐 정도, 퍼짐 정도, 색상 순서 */
+  /* 0 4px 15px rgba(0, 0, 0, 0.05): 아래쪽으로 부드럽게 퍼지는 연한 그림자 */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08);
+  /* 테두리가 너무 날카롭다면 약간의 곡률을 주는 것도 좋습니다 */
+  border-radius: 8px;
+}
+.menu-line {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 90%;
+  gap: 3%;
+}
+.menu-box {
+  margin: 10px 10px 10px 10px;
+}
+.menu-box img {
+  width: 100%;
+}
+
+.line2 {
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+.name {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 20pt;
+}
+
+.price {
+  display: flex;
+  position: absolute;
+  align-items: center;
+  font-size: 9pt;
+  right: 0px;
+  top: 35px;
+}
+.price span {
+  color: red;
+  font-size: 15pt;
+}
+.expain {
+  font-size: 12pt;
+}
+
+.explain-bold {
+  font-size: 13pt;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.price-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3열 구조 */
+  gap: 15px 10px; /* 행 간격 15px, 열 간격 10px */
+}
+
+.price-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* 왼쪽 인원 박스 */
+.person-box {
+  border: 1px solid #333;
+  width: 80px;
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 12pt;
+  line-height: 1.1;
+}
+
+.person-box span {
+  font-size: 9pt;
+  font-weight: normal;
+}
+
+/* 오른쪽 가격 텍스트 */
+.price-text {
+  font-size: 12pt;
+  font-weight: normal;
+  color: #333;
+}
+
+.price-text span {
+  font-size: 14pt;
+  margin-left: 2px;
+}
+
+.main4 {
+  padding: 60px;
+  background-color: white;
+  display: flex;
+  margin: 0px auto;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 64%;
+}
+.d-title {
+  font-size: 25pt;
+  /* font-weight: bold; */
+  margin-bottom: 50px;
+}
+
+.main4 {
+  margin-top: 80px;
+  margin-bottom: 50px;
+  /* x축, y축, 번짐 정도, 퍼짐 정도, 색상 순서 */
+  /* 0 4px 15px rgba(0, 0, 0, 0.05): 아래쪽으로 부드럽게 퍼지는 연한 그림자 */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08);
+
+  /* 테두리가 너무 날카롭다면 약간의 곡률을 주는 것도 좋습니다 */
+  border-radius: 8px;
+}
+
+.side-menu {
+  width: 100%;
+}
+/* ************************************************************************************ */

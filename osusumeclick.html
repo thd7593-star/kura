@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="osusumeclick.css" />
+    <link rel="stylesheet" href="kura.css" />
+    <link rel="stylesheet" href="footer.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=M+PLUS+1+Code:wght@100..700&family=Noto+Serif+JP:wght@200..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=M+PLUS+1+Code:wght@100..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic&family=Google+Sans+Flex:opsz,wght@6..144,1..1000&family=Sawarabi+Gothic&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      footer {
+        font-family: "M PLUS 1 Code", monospace;
+      }
+      body,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      p,
+      a,
+      li,
+      span,
+      button {
+        font-family: "Noto Serif JP", serif;
+        font-optical-sizing: auto;
+        font-style: normal;
+      }
+    </style>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Noto Serif JP", serif;
+        font-optical-sizing: auto;
+        font-style: normal;
+        font-weight: 400;
+      }
+    </style>
+  
+
+    <main>
+      <div class="top-bg">
+        <img
+          id="bg"
+          src="https://www.kurasushi.co.jp/smart_kura/images/second_bg.jpg"
+          alt=""
+        />
+        <img
+          id="human"
+          src="https://www.kurasushi.co.jp/smart_kura/images/top_human.png"
+          alt=""
+        />
+        <img
+          id="tree"
+          src="https://www.kurasushi.co.jp/smart_kura/images/top_bg_tree.png"
+          alt=""
+        />
+        <div>
+          <img
+            class="top-text"
+            src="https://www.kurasushi.co.jp/smart_kura/images/top_smart_logo.png"
+            alt=""
+          />
+        </div>
+      </div>
+      <div class="contents">
+        <img
+          id="title"
+          src="https://www.kurasushi.co.jp/smart_kura/images/restaurant_ttl.png?250127"
+          alt=""
+        />
+        <div id="text">
+          新しい生活様式のもと、最先端技術を駆使して利便性の向上を図り、<br />
+          安心・安全そしてワクワクする夢のあるレストランを創造する「スマートくらプロジェクト」により、<br />
+          コンタクトレス・タッチレス※を実現した新しい食空間が誕生。<br />
+
+          <div id="text2">※スタッフを介さない、機械に触れない</div>
+        </div>
+        <div id="youtube">
+          <iframe
+            src="https://www.youtube.com/embed/ur-CS8ZkkOY"
+            title="スマートくら寿司"
+            frameborder="0"
+            allow="
+              accelerometer;
+              autoplay;
+              clipboard-write;
+              encrypted-media;
+              gyroscope;
+              picture-in-picture;
+              web-share;
+            "
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div class="box">
+          <div>
+            <img
+              src="https://www.kurasushi.co.jp/smart_kura/images/restaurant_01.jpg"
+              alt=""
+            />
+          </div>
+          <div class="text-box">
+            <div class="text-L">スマホで予約</div>
+            <div class="text-S">
+              いつでもどこでも自身のスマホから時間を指定し <br />
+              てご予約が可能です。
+            </div>
+          </div>
+        </div>
+        <div class="box">
+          <div>
+            <img
+              src="https://www.kurasushi.co.jp/smart_kura/images/restaurant_02.jpg"
+              alt=""
+            />
+          </div>
+          <div class="text-box">
+            <div class="text-L">セルフ案内</div>
+            <div class="text-S">
+              来店してから自動案内機にチェックインすること <br />
+              で、店員を介さずセルフで席までの案内が可能 <br />
+              に。
+            </div>
+          </div>
+        </div>
+        <div class="box">
+          <div>
+            <img
+              src="https://www.kurasushi.co.jp/smart_kura/images/restaurant_03.jpg"
+              alt=""
+            />
+          </div>
+          <div class="text-box">
+            <div class="text-L">スマホで注文</div>
+            <div class="text-S">
+              タッチパネルに触れることなく自身のスマホから <br />
+              注文いただけます。
+            </div>
+          </div>
+        </div>
+        <div class="box">
+          <div>
+            <img
+              src="https://www.kurasushi.co.jp/smart_kura/images/restaurant_04.jpg"
+              alt=""
+            />
+          </div>
+          <div class="text-box">
+            <div class="text-L">抗菌寿司カバー</div>
+            <div class="text-S">
+              ウイルスなどからお寿司をガードし、フタに触れ <br />
+              ずにお皿が取れます。
+            </div>
+          </div>
+        </div>
+        <div class="box">
+          <div>
+            <img
+              src="https://www.kurasushi.co.jp/smart_kura/images/restaurant_05.jpg"
+              alt=""
+            />
+          </div>
+          <div class="text-box">
+            <div class="text-L">セルフチェック</div>
+            <div class="text-S">
+              食べたお皿の枚数を自動でチェックする最先端の <br />
+              設備。「水回収システム」とのダブルチェック <br />
+              で、店員を介さず正確な枚数を自動計算します。
+            </div>
+          </div>
+        </div>
+        <div class="box">
+          <div>
+            <img
+              src="https://www.kurasushi.co.jp/smart_kura/images/restaurant_06.jpg"
+              alt=""
+            />
+          </div>
+          <div class="text-box">
+            <div class="text-L">セルフ会計</div>
+            <div class="text-S">
+              店員がいなくてもお客様自身で会計出来るシステ <br />
+              ム。
+            </div>
+          </div>
+        </div>
+        <div><h1>実施店舗</h1></div>
+        <button>実施店舗の一覧はこちら</button>
+      </div>
+
+      <!-- 푸터 -->
+<footer class="kura-footer">
+    <div class="footer-inner">
+        <nav class="footer-nav">
+            <div class="nav-col">
+                <h3>公式サイト</h3>
+                <ul>
+                    <li><a href="#">おすすめ情報</a></li>
+                    <li><a href="#">店舗検索</a></li>
+                    <li><a href="#">メニュー</a></li>
+                    <li><a href="#">お持ち帰り寿司</a></li>
+                    <li class="mt-20"><a href="#">くら寿司プレスリリース</a></li>
+                </ul>
+            </div>
+
+              <body>
+  
+            <div class="nav-col">
+                <h3>企業サイト</h3>
+                <ul>
+                    <li><a href="https://www.kurasushi.co.jp/company/?_ga=2.47471271.1034545711.1771650560-1362875877.1771650560&_gl=1*1xc2jz8*_ga*MTM2Mjg3NTg3Ny4xNzcxNjUwNTYw*_ga_4ETWR1HF6K*czE3NzE5MTI3MTgkbzgkZzEkdDE3NzE5MTI3MjckajUxJGwwJGgw">会社案内</a></li>
+                    <li><a href="https://www.kurasushi.co.jp/company/ir/?_ga=2.47471271.1034545711.1771650560-1362875877.1771650560&_gl=1*bhqs92*_ga*MTM2Mjg3NTg3Ny4xNzcxNjUwNTYw*_ga_4ETWR1HF6K*czE3NzE5MTI3MTgkbzgkZzEkdDE3NzE5MTI4NDYkajYwJGwwJGgw">IR情報</a></li>
+                    <li><a href="https://www.kurasushi.co.jp/company/csr/?_ga=2.15051830.1034545711.1771650560-1362875877.1771650560&_gl=1*m11kzq*_ga*MTM2Mjg3NTg3Ny4xNzcxNjUwNTYw*_ga_4ETWR1HF6K*czE3NzE5MTI3MTgkbzgkZzEkdDE3NzE5MTI4NTgkajQ4JGwwJGgw">CSR活動</a></li>
+                    <li><a href="https://www.kurasushi.co.jp/company/recruit/?_ga=2.15051830.1034545711.1771650560-1362875877.1771650560&_gl=1*1672yz6*_ga*MTM2Mjg3NTg3Ny4xNzcxNjUwNTYw*_ga_4ETWR1HF6K*czE3NzE5MTI3MTgkbzgkZzEkdDE3NzE5MTI4ODMkajIzJGwwJGgw">採用情報</a></li>
+                    <li><a href="https://kura-job.net/jobfind-pc/">アルバイト・パート募集</a></li>
+                </ul>
+            </div>
+            <div class="nav-col">
+                <h3>Globalサイト</h3>
+                <ul>
+                    <li><a href="https://kurasushi.com/">KURA Sushi USA, Inc.</a></li>
+                    <li><a href="https://www.kurasushi.tw/">亞洲藏壽司股份有限公司</a></li>
+                </ul>
+            </div>
+            <div class="nav-col no-title">
+                <ul>
+                    <li><a href="https://www.kurasushi.co.jp/company/btob/storeland.php?_ga=2.35045025.1034545711.1771650560-1362875877.1771650560&_gl=1*vhpw6n*_ga*MTM2Mjg3NTg3Ny4xNzcxNjUwNTYw*_ga_4ETWR1HF6K*czE3NzE5MTI3MTgkbzgkZzEkdDE3NzE5MTI5NzIkajUkbDAkaDA.">店舗用地募集</a></li>
+                    <li><a href="https://www.kurasushi.co.jp/company/btob/local.php?_ga=2.35045025.1034545711.1771650560-1362875877.1771650560&_gl=1*9i015t*_ga*MTM2Mjg3NTg3Ny4xNzcxNjUwNTYw*_ga_4ETWR1HF6K*czE3NzE5MTI3MTgkbzgkZzEkdDE3NzE5MTI5OTIkajYwJGwwJGgw">ご当地食材募集</a></li>
+                    <li class="mt-20"><a href="https://www.kurasushi.co.jp/contact/?_ga=2.35045025.1034545711.1771650560-1362875877.1771650560&_gl=1*1g5t1a5*_ga*MTM2Mjg3NTg3Ny4xNzcxNjUwNTYw*_ga_4ETWR1HF6K*czE3NzE5MTI3MTgkbzgkZzEkdDE3NzE5MTMwMTQkajM4JGwwJGgw">お問い合わせ</a></li>
+                    <li><a href="https://www.kurasushi.co.jp/policy/?_ga=2.43488165.1034545711.1771650560-1362875877.1771650560&_gl=1*t43wyb*_ga*MTM2Mjg3NTg3Ny4xNzcxNjUwNTYw*_ga_4ETWR1HF6K*czE3NzE5MTI3MTgkbzgkZzEkdDE3NzE5MTMwNTYkajYwJGwwJGgw">プライバシーポリシー</a></li>
+                    <li><a href="https://www.kurasushi.co.jp/policy/socialmedia.html?_ga=2.206413587.1034545711.1771650560-1362875877.1771650560&_gl=1*1poi98o*_ga*MTM2Mjg3NTg3Ny4xNzcxNjUwNTYw*_ga_4ETWR1HF6K*czE3NzE5MTI3MTgkbzgkZzEkdDE3NzE5MTMwNTYkajYwJGwwJGgw">ソーシャルメディアポリシー</a></li>
+                   
+                </ul>
+            </div>
+        </nav>
+
+        <div class="allergy-btn-wrap">
+            <a href="https://www.kurasushi.co.jp/app/app_allergen.html" class="allergy-btn">アレルギー・原材料・原産地情報</a>
+        </div>
+
+        <div class="sns-box">
+            <div class="sns-top">
+                <span class="sns-label">くら寿司公式SNSで最新情報を配信中</span>
+                <div class="sns-icons">
+                    <a href="https://www.youtube.com/channel/UC9DcLCVMjjiuyuc4_deD0Pw"><img src="https://www.kurasushi.co.jp/common/images/icon_sns_yt.svg" alt="YouTube"></a>
+                    <a href="https://x.com/mutenkurasushi"><img src="https://www.kurasushi.co.jp/common/images/icon_sns_x.svg" alt="트위터"></a>
+                    <a href="https://www.facebook.com/Kurasushi"><img src="https://www.kurasushi.co.jp/common/images/icon_sns_fb.svg" alt="Facebook"></a>
+                         <a href="https://www.instagram.com/kurasushi.fan/"><img src="https://www.kurasushi.co.jp/common/images/icon_sns_in.png" alt="Facebook"></a>
+            
+                  </div>
+            </div>
+            <div class="sns-bottom">
+                <a href="https://www.kurasushi.co.jp/policy/socialmedia.html" class="sns-policy">ソーシャルメディアポリシー</a>
+            </div>
+        </div>
+<div class="footer-bottom">
+    <div class="bottom-logo">
+        <a href="kura.html">
+            <img src="logo.png" alt="くら寿司 ロゴ" class="bottom-logo" />
+        </a>
+    </div>
+    <p class="copyright">Copyright Kura Sushi, Inc. All Rights Reserved.</p>
+</div>
+                
+           
+    </div>
+
+    <div class="footer-pattern">
+        <a href="#" class="btn-top"></a>
+    </div>
+</footer>
+
+    </main>
+
+    <script src="kura.js"></script>
+    <script src="footer.js"></script>
+  </body>
+</html>
